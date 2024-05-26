@@ -1,0 +1,876 @@
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Call of Duty: Modern Warfare III', 139.95, 'https://i.imgur.com/9kqkcCd.png', 'PC');
+
+DECLARE @GameId INT;
+SET @GameId = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/xwxRanN.jpg', 'Call of Duty: Modern Warfare III', 'comp.png', 'Standard Edition', 'In stock', '18+', 139.95, @GameId);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Activision', '3.50 out of 5.00', @GameId);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'FPS', 'SHOOTER', 'FIRST-PERSON', 'https://i.imgur.com/pDugLFa.png', 'ABOUT THE GAME', 'ADAPT OR DIE IN A FIGHT AGAINST THE ULTIMATE THREAT In the direct sequel to the record-breaking Call of Duty®: Modern Warfare® II, Captain Price and Task Force 141 face off against the ultimate threat.', @GameId);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/z6YEdmw.jpg', 'Story 1', 'In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat. The ultranationalist war criminal Vladimir Makarov is extending his grasp across the world causing Task Force 141 to fight like never before.', @GameId),
+	   ('https://i.imgur.com/wmyJViF.jpg', 'Story 2', 'Modern Warfare III celebrates the 20th anniversary of Call of Duty with one of the greatest collections of Multiplayer maps ever assembled - both fan favorites and all new ones. All 16 launch maps from the original Modern Warfare 2 (2009) have been modernized with new modes and gameplay features and will be available at launch to get everyone started, while over 12 all-new core 6v6 maps will fuel post-launch live seasons.', @GameId),
+	   ('https://i.imgur.com/gARyLwP.jpg', 'Story 3', 'For the first time, team up with other squads to survive and fight massive hordes of the undead in the largest Call of Duty Zombies map ever. Modern Warfare Zombies (MWZ) tells a new Treyarch Zombies story with missions, core Zombies features, and secrets to discover.', @GameId),
+	   ('https://i.imgur.com/Zjacc2L.jpg', 'Story 4', 'Season 3 may have just launched, but dataminers have already got their hands on some info about the fourth seasons of Call of Duty: Modern Warfare III and Call of Duty: Warzone. There are some references to Fallout, Gundam and The Crow.', @GameId);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/JfNoJrs.jpg', 'https://www.youtube.com/watch?v=mHDEDDrGYvo', @GameId),
+	('https://i.imgur.com/KtFvO0v.jpg', 'https://www.youtube.com/watch?v=bv_ZCbrpqkI', @GameId),
+	('https://i.imgur.com/LldcvmR.jpg', 'https://www.youtube.com/watch?v=DZNSOEVJtok', @GameId),
+    ('https://i.imgur.com/8umezB6.jpg', 'https://www.youtube.com/watch?v=ZWb6wCKA_Pk', @GameId);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES ('Windows 10 64 Bit (latest update)', 'Intel Core i5-6600 or AMD Ryzen 5 1400', '8 GB RAM', 'NVIDIA GeForce GTX 960 / GTX 1650 or AMD Radeon RX 470', 'SSD with 149 GB available space at launch', 'Windows 10 64 Bit (latest update) or Windows 11 64 Bit (latest update)', 'Intel Core i7-6700K or AMD Ryzen 5 1600X', '16 GB RAM', 'NVIDIA GeForce GTX 1080Ti / RTX 3060 or AMD Radeon RX 6600XT or Intel Arc A770', 'SSD with 149 GB available space at launch', @GameId);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Marvels Spider-Man Remastered', 110.85, 'https://i.imgur.com/aprQK4n.jpg', 'PC');
+
+DECLARE @GameId2 INT;
+SET @GameId2 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/lMZG9HZ.jpg', 'Marvels Spider-Man Remastered', 'comp.png', 'Standard Edition', 'In stock', '18+', 110.85, @GameId2);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Insomniac Games', '3.90 out of 5.00', @GameId2);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'ADVENTURE', 'SUPERHERO', 'TPP', 'https://i.imgur.com/RvjxozQ.jpg', 'ABOUT THE GAME', 'Marvels Spider-Man Remastered for PC is a refreshed version of the action adventure game from 2018. Featuring third person play, you take on the character of web-lord, Spider-Man, dealing with Peter Parkers personal life as well as battling super-human villain Mister Negative – a villains name if there ever was one! – in his bid to take over New Yorks underworld.', @GameId2);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/W04bMAr.jpg', 'Story 1', 'Marvels Spider-Man Remastered for PC is a refreshed version of the action adventure game from 2018. Featuring third person play, you take on the character of web-lord, Spider-Man, dealing with Peter Parkers personal life as well as battling super-human villain Mister Negative – a villains name if there ever was one! – in his bid to take over New Yorks underworld.', @GameId2),
+	   ('https://i.imgur.com/ZLCxGFv.jpg', 'Story 2', 'Mister Negative plans to achieve his aims by unleashing a deadly virus on the city – a chilling forecast of Covid-19, perhaps. Spider-Man must jump, run, swing and use his webs to navigate the Manhattan borough in the fictionalised NYC, aiming webs precisely to achieve your goals. When Spidey is in too much of a hurry to swing, you can use fast travel by hopping on the subway.', @GameId2),
+	   ('https://i.imgur.com/yLpt1TC.jpg', 'Story 3', 'The game has a lovely open world feel, with Spider-Man able to freely explore the city. He can also accept side quests, interact with NPCs, complete missions and earn tokens, which are the in-game currency which allows you to buy goodies, and unlock new suits and useful gadgets (such as electric webbing, impact webbing which pushes enemies away and makes them stick to whatever they bump into, concussive blast).', @GameId2),
+	   ('https://i.imgur.com/kUWVJCd.jpg', 'Story 4', 'As you play along and progress through the game’s story arc, there are also collectibles to snatch up and additional content to unlock. As might be expected from a Spider-Man game, combat mainly involves web-slinging, using the environment to your best advantage and chaining attacks together to befuddle enemies rather than take them down in face-to-face combat.', @GameId2);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/pk67fXV.jpg', 'https://www.youtube.com/watch?v=M6oWk1tmt7c', @GameId2),
+	('https://i.imgur.com/2PIMEXo.jpg', 'https://www.youtube.com/watch?v=Tsf5Wjb1uAM', @GameId2),
+	('https://i.imgur.com/dKa0aZf.jpg', 'https://www.youtube.com/watch?v=1E051WtpyWg', @GameId2),
+    ('https://i.imgur.com/FdtsgRw.jpg', 'https://www.youtube.com/watch?v=FwyG7-pisC8', @GameId2);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES ('Windows 10 64-bit', 'Intel Core i3-4160, 3.6 GHz or AMD equivalent', '8 GB RAM', 'NVIDIA GTX 950 or AMD Radeon RX 470', '75 GB available space', 'Windows 10 64-bit', 'Intel Core i5-4670, 3.4 Ghz or AMD Ryzen5 1600, 3.2 Ghz', '16 GB RAM', 'NVIDIA GTX 1060 6GB or AMD Radeon RX 580 8GB', '75 GB available space', @GameId2);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Ready or Not', 95.35, 'https://i.imgur.com/nHuNjG9.jpg', 'PC');
+
+DECLARE @GameId3 INT;
+SET @GameId3 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/jMGNGZI.jpg', 'Ready Or Not', 'comp.png', 'Standard Edition', 'In stock', '18+', 95.35, @GameId3);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'VOID Interactive', '4.00 out of 5.00', @GameId3);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'ADVENTURE', 'INDIES', 'FPP', 'https://i.imgur.com/xOLh8Nv.jpg', 'ABOUT THE GAME', 'Los Sueños – The LSPD reports a massive upsurge in violent crime across the greater Los Sueños area. Special Weapons and Tactics (SWAT) teams have been dispatched to respond to various scenes involving high-risk hostage situations, active bomb threats, barricaded suspects, and other criminal activities.', @GameId3);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/KPZjE8z.jpg', 'Story 1', 'Los Suenos – The LSPD reports a massive upsurge in violent crime across the greater Los Suenos area. Special Weapons and Tactics (SWAT) teams have been dispatched to respond to various scenes involving high-risk hostage situations, active bomb threats, barricaded suspects, and other criminal activities. Citizens are being advised to practice caution when traveling the city or to stay at home.', @GameId3),
+	   ('https://i.imgur.com/hqk4OZp.jpg', 'Story 2', 'New Expectations: Whether this is your first time in Los Suenos or not, the city has changed and so too have the tools and methods with which we conduct our work. The haunts you might have seen or heard about are re-imagined, and so have the angles with which we approach each call.', @GameId3),
+	   ('https://i.imgur.com/FkHUeLR.jpg', 'Story 3', 'Take Command: The role of the Commander of the LSPD SWAT is to compose their team from a large roster with unique talents, give tactical orders, meticulously plan, and carry out missions. Commanders are obligated to conduct each mission with integrity and look after their team’s mental and physical health. Officers with unaddressed deteriorating mental status may be unable to properly perform their duties or even feel compelled to quit the force.', @GameId3),
+	   ('https://i.imgur.com/uXqKBug.jpg', 'Story 4', 'SWAT Team Quality Enhancement: Much anticipated improved SWAT training procedures, tactics, and experience in the LSPD has led to an overall increase in the quality and quantity of officers in our roster. Expanded tactical versatility allows our officers to take on any challenge with renewed confidence, blending coordination and independence seamlessly. There is also additional basic training now available to SWAT members to keep foundational knowledge and muscle memory in top shape.', @GameId3);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/DL9m3yc.jpg', 'https://www.youtube.com/watch?v=hdJI3_8zG7A', @GameId3),
+	('https://i.imgur.com/dfBUiLJ.jpg', 'https://www.youtube.com/watch?v=wG4xCDICUi0', @GameId3),
+	('https://i.imgur.com/hSARlE9.jpg', 'https://www.youtube.com/watch?v=lh9Fyxde8yI', @GameId3),
+    ('https://i.imgur.com/6sYUz03.jpg', 'https://www.youtube.com/watch?v=Gok-70TwEcQ', @GameId3);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES ('64-bit Windows 7, Windows 8.1, Windows 10', 'Intel Core i5-4430 / AMD FX-6300', '8 GB RAM', 'NVIDIA GeForce GTX 960 2GB / AMD Radeon R7 370 2GB', '90 GB available space', '64-bit Windows 10', 'AMD Ryzen 5-1600 / Intel Core i5-7600K', '8 GB RAM', 'Nvidia GTX 1060 6GB or better', '90 GB available space', @GameId3);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Red Dead Redemption 2', 78.49, 'https://i.imgur.com/FpDVpbn.jpg', 'PC');
+
+DECLARE @GameId4 INT;
+SET @GameId4 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/hwk6Ssk.jpg', 'Red Dead Redemption 2', 'comp.png', 'Standard Edition', 'In stock', '18+', 78.49, @GameId4);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Rockstar Games', '4.50 out of 5.00', @GameId4);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'ADVENTURE', 'WESTERN', 'STORY RICH', 'https://i.imgur.com/qmwXyPw.jpg', 'ABOUT THE GAME', 'Red Dead Redemption 2 for PC is an action adventure, open world game in which the player can roam freely with some elements playing out in third person, others in first person play modes. The player can commit crimes, but must then be prepared for law enforcement to hunt them down, ready to bring to bear the full weight of the law on the miscreant!', @GameId4);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/OpX44FC.jpg', 'Story 1', 'RDR2, as the game is affectionately known, was released for other platforms before the PC release, and this saw the game gaining the title of best-selling game of all time, before the PC game figures were included. The reason for the game’s popularity is not hard to see.', @GameId4),
+	   ('https://i.imgur.com/7lMBUpg.jpg', 'Story 2', 'Unlike games where mayhem and destruction are key, this game allows you to sink into the beauty of the Wild West scenery, and to form empathic and sympathetic bonds with other players and NPCs (non-playing characters) in the moments between the action driven sequences – of which there are also many.', @GameId4),
+	   ('https://i.imgur.com/yn3ulDy.jpg', 'Story 3', 'Once each mission is complete, Arthur is free to wander the open world, exploring widely and uncovering new places and, occasionally, stumbling onto his next mission which he can play through before returning to his original point to continue from there.', @GameId4),
+	   ('https://i.imgur.com/yOppOV0.jpg', 'Story 4', 'Despite the tightly plotted story arcs, the game is strongly player driven, with your decisions deciding where the game will take you next. You can linger along each journey, catching villains committing crimes, helping people in distress and helping them with side missions, or you can pass them by, ignoring all the NPCs in your determination to get to your next destination.', @GameId4);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/XsPHulM.jpg', 'https://www.youtube.com/watch?v=SXvQ1nK4oxk', @GameId4),
+	('https://i.imgur.com/f6qNNwJ.jpg', 'https://www.youtube.com/watch?v=g-WKpapqVU8', @GameId4),
+	('https://i.imgur.com/3EZw45s.jpg', 'https://www.youtube.com/watch?v=iqaipBpnVRE', @GameId4),
+    ('https://i.imgur.com/0S9ZIlP.jpg', 'https://www.youtube.com/watch?v=Dw_oH5oiUSE', @GameId4);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES ('Windows 10 - April 2018 Update (v1803)', 'Intel Core i7-4770K / AMD Ryzen 5 1500X', '12 GB RAM', 'Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB', '150 GB available space', 'Windows 10 - April 2018 Update (v1803)', 'Intel Core i7-4770K / AMD Ryzen 5 1500X', '12 GB RAM', 'Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB', '150 GB available space', @GameId4);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('NBA 2K24 Kobe Bryant Edition', 60.55, 'https://i.imgur.com/sM95V6a.jpg', 'PC');
+
+DECLARE @GameId5 INT;
+SET @GameId5 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/CalA6R2.jpg', 'NBA 2K24 Kobe Bryant Edition', 'comp.png', 'Standard Edition', 'In stock', '16+', 60.55, @GameId5);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Visual Concepts', '4.40 out of 5.00', @GameId5);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('SPORTS', 'SIMULATION', 'BASKETBALL', 'ESPORTS', 'https://i.imgur.com/XJa7WyM.jpg', 'ABOUT THE GAME', 'Grab your squad and experience the past, present, and future of hoops culture in NBA 2K24. Enjoy loads of pure, unadulterated action and limitless personalized MyPLAYER options in MyCAREER. Collect an impressive array of legends and build your perfect lineup in MyTEAM. Feel more responsive gameplay and polished visuals while playing with your favorite NBA and WNBA teams in PLAY NOW.', @GameId5);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/Ld0rToJ.jpg', 'Story 1', 'Grab your squad and experience the past, present, and future of hoops culture in NBA 2K24. Enjoy loads of pure, unadulterated action and limitless personalized MyPLAYER options in MyCAREER. Collect an impressive array of legends and build your perfect lineup in MyTEAM. Feel more responsive gameplay and polished visuals while playing with your favorite NBA and WNBA teams in PLAY NOW.', @GameId5),
+	   ('https://i.imgur.com/sYtduL5.jpg', 'Story 2', 'Channel your inner-Mamba Mentality as you recreate Kobe’s most dominant and captivating performances during his rise to global superstardom. Revisit his early career triumphs as a young phenom, and progress through his transcendent journey from elite scorer to one of the greatest players ever.', @GameId5),
+	   ('https://i.imgur.com/3K1jDai.jpg', 'Story 3', 'Make your mark on a scenic, coastal Neighborhood rich with postcard-esque views and blistering competition. Use the revamped player builder to create a MyPLAYER that suits your skillset, so you can play to your strengths and get the most out of the updated Badge system. Explore cliffside terrain, complete a new set of streamlined quests, and take on rival players in the ultimate MyCAREER backdrop.', @GameId5),
+	   ('https://i.imgur.com/Gjp20NI.jpg', 'Story 4', 'Enjoy the most authentic gameplay yet, with an emphasis on seamless mechanics and attention to detail. Showcase your deep arsenal of moves with revamped interior defense and dribble combo controls for more rewarding skill-based actions and effectiveness.', @GameId5);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/HUOmbwt.jpg', 'https://www.youtube.com/watch?v=IhLJ0LZ8QMY', @GameId5),
+	('https://i.imgur.com/o6Pr5uw.jpg', 'https://www.youtube.com/watch?v=OJS1BVniz5c', @GameId5),
+	('https://i.imgur.com/W3gQ6Jy.jpg', 'https://www.youtube.com/watch?v=BD8rZIAxU7w', @GameId5),
+    ('https://i.imgur.com/BiScsDI.jpg', 'https://www.youtube.com/watch?v=Pu0ctdX1IBs', @GameId5);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES ('Windows 10 64-bit or Windows 11 64-bit', 'Intel Core i3-2100 @ 3.10 GHz/ AMD FX-6200 @ 3.80 GHz or better', '6 GB RAM', 'NVIDIA GeForce GT 450 1GB/ ATI Radeon HD 7770 1 GB or better', '150 GB available space', 'Windows 10 64-bit or Windows 11 64-bit', 'Intel Core i5-4430 @ 3 GHz/ AMD FX-8370 @ 3.4 GHz or better', '8 GB RAM', 'NVIDIA GeForce GTX 770 2GB/ ATI Radeon R9 270 2GB or better', '150 GB available space', @GameId5);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('The Crew Motorfest', 70.95, 'https://i.imgur.com/RGbIAOj.jpg', 'PC');
+
+DECLARE @GameId6 INT;
+SET @GameId6 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/xz9l7ua.jpg', 'The Crew Motorfest', 'comp.png', 'Standard Edition', 'In stock', '16+', 70.95, @GameId6);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'IVORY, Ubisoft Ivory Tower', '4.40 out of 5.00', @GameId6);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('RACING', 'ARCADE', 'DRIVING', 'SPORTS', 'https://i.imgur.com/D98SxvP.jpg', 'ABOUT THE GAME', 'Welcome to Motorfest! This all-year-round festival will let you enjoy the best experiences car culture has to offer. EXPLORE A VIBRANT HAWAIIAN OPEN WORLD The Crew Motorfest has settled down in one of the most breathtaking places on Earth: the island of O’ahu, Hawaii. Join high-speed street races through the bustling city of Honolulu, test your skills off-road on the ashy slopes of a volcano, or master the perfect curve on the tracks.', @GameId6);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/ROVGvG8.jpg', 'Story 1', 'Welcome to Motorfest! This all-year-round festival will let you enjoy the best experiences car culture has to offer.', @GameId6),
+	   ('https://i.imgur.com/xMmt70r.jpg', 'Story 2', 'The Crew Motorfest has settled down in one of the most breathtaking places on Earth: the island of O’ahu, Hawaii. Join high-speed street races through the bustling city of Honolulu, test your skills off-road on the ashy slopes of a volcano, or master the perfect curve on the tracks.', @GameId6),
+	   ('https://i.imgur.com/SeRTOud.jpg', 'Story 3', 'Enjoy a variety of thrilling driving activities and choose how you want to have fun with your cars! Discover the playlists and dive into thematic campaigns that will immerse you in the most exciting car culture universes, including American muscle, Japanese-style street racing, and legendary machines of the past!', @GameId6),
+	   ('https://i.imgur.com/RAEyyul.jpg', 'Story 4', 'Compete in intense driving races, show off your own style, collect the most iconic cars, and much more! Master every driving challenge and fill your collection with the most legendary vehicles ever created.', @GameId6);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/MrN7LCz.jpg', 'https://www.youtube.com/watch?v=QuvaE7VhhjY', @GameId6),
+	('https://i.imgur.com/TGBPK3F.jpg', 'https://www.youtube.com/watch?v=ugKIELPN8mI', @GameId6),
+	('https://i.imgur.com/QQktMs4.jpg', 'https://www.youtube.com/watch?v=xF45nzjSq2E', @GameId6),
+    ('https://i.imgur.com/eFdqHRi.jpg', 'https://www.youtube.com/watch?v=TIbh9m6jQPk', @GameId6);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES ('Windows 10 (64 bit only)', 'Intel Core i5-4460, AMD Ryzen5 1400', '8 GB RAM', 'NVIDIA GeForce GTX 1060 6GB or AMD Radeon RX 480 8GB', '40 GB available space', 'Windows 10 (64 bit only)', 'Intel Core i5-8400, AMD Ryzen7 2700X', '8 GB RAM', 'NVIDIA GeForce RTX 2060 6GB  or AMD Radeon RX 5700XT 8GB', '40 GB available space', @GameId6);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Cyberpunk 2077', 49.95, 'https://i.imgur.com/ZJG0lYO.jpg', 'PC');
+
+DECLARE @GameId7 INT;
+SET @GameId7 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/lzqzuuQ.jpg', 'Cyberpunk 2077', 'comp.png', 'Standard Edition', 'In stock', '18+', 49.95, @GameId7);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'CD PROJEKT RED', '3.50 out of 5.00', @GameId7);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('RPG', 'FUTURISTIC', 'SCI-FI', 'ACTION', 'https://i.imgur.com/T0hQyrG.png', 'ABOUT THE GAME', 'Cyberpunk 2077 for PC is a first-person shooter game, but one with a difference. Set in a dystopian Free State of California, the rules of the nation and the state no longer apply. Instead, playing as a mercenary named V, the player must work their way around the city, attaining their goals and battling enemies as they go.', @GameId7);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/D4B4s8W.jpg', 'Story 1', 'Cyberpunk 2077 for PC is a first-person shooter game, but one with a difference. Set in a dystopian Free State of California, the rules of the nation and the state no longer apply. Instead, playing as a mercenary named V, the player must work their way around the city, attaining their goals and battling enemies as they go.', @GameId7),
+	   ('https://i.imgur.com/NyLmD6r.jpg', 'Story 2', 'Seven years in the making, Cyberpunk 2077 looks to be living up to all the hype generated by its introduction at E3 in 2019. Set fifty-seven years after the table-top game upon which it is based, Cyberpunk 2020, the graphics are exquisitely rendered with characters, scenery and even actions and movements so realistic that they could be mistaken for movie footage.', @GameId7),
+	   ('https://i.imgur.com/73DPytr.jpg', 'Story 3', 'As you play through the narrative driven game, it is possible to play without killing any other characters, using non-lethal weaponry and strategies that keep you out of serious confrontations of the sort that tend to become lethal.', @GameId7),
+	   ('https://i.imgur.com/XWZ7afV.jpg', 'Story 4', 'The game features full nudity, as players are able to upgrade their bodies with modifications that give them extra powers and capabilities, and they need to strip down in order to fit their new limbs and attachments.', @GameId7);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/cm24S5m.jpg', 'https://www.youtube.com/watch?v=8X2kIfS6fb8', @GameId7),
+	('https://i.imgur.com/cAcRA1S.jpg', 'https://www.youtube.com/watch?v=UnA7tepsc7s', @GameId7),
+	('https://i.imgur.com/pDKpDjE.jpg', 'https://www.youtube.com/watch?v=qIcTM8WXFjk', @GameId7),
+    ('https://i.imgur.com/Vv0aP3a.jpg', 'https://www.youtube.com/watch?v=BO8lX3hDU30', @GameId7);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES ('64-bit Windows 10', 'Core i7-6700 or Ryzen 5 1600', '12 GB RAM', 'GeForce GTX 1060 6GB or Radeon RX 580 8GB or Arc A380', '70 GB available space', '64-bit Windows 10', 'Core i7-12700 or Ryzen 7 7800X3D', '16 GB RAM', 'GeForce RTX 2060 SUPER or Radeon RX 5700 XT or Arc A770', '70 GB available space', @GameId7);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Cities: Skylines II', 29.99, 'https://i.imgur.com/LnKGokQ.jpg', 'PC');
+
+DECLARE @GameId8 INT;
+SET @GameId8 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/zrTDELd.jpg', 'Cities: Skylines II', 'comp.png', 'Standard Edition', 'In stock', '14+', 29.99, @GameId8);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Colossal Order Ltd.', '3.80 out of 5.00', @GameId8);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('SIMULATION', 'BUILDING', 'ECONOMY', 'RELAXING', 'https://i.imgur.com/PSB7o2I.png', 'ABOUT THE GAME', 'Cities: Skylines II for PC is a city building game, the sequel to the first game with the same name. The player is the developer of a plot of land on which they must create a city. Players can lay down roads, zoning, utilities, and city services to attract residents and businesses. You can also set city policies like taxes and edicts to influence how the city grows – and spend the tax money on more expansion, better services and improved infrastructure.', @GameId8);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/q5xHtWa.jpg', 'Story 1', 'Cities: Skylines II for PC is a city building game, the sequel to the first game with the same name. The player is the developer of a plot of land on which they must create a city. Players can lay down roads, zoning, utilities, and city services to attract residents and businesses.', @GameId8),
+	   ('https://i.imgur.com/2x3l6Fe.jpg', 'Story 2', 'Initially you are limited to nine tiles of building space but you can purchase additional tiles from city funds – the above-mentioned tax, amongst other earning. Nine tiles was the upper limit of the previous game (it was twenty-five in the remastered edition that was for consoles): this game allows the player ultimately to go up to a hefty 441 tiles.', @GameId8),
+	   ('https://i.imgur.com/XNvchii.jpg', 'Story 3', 'You must create trade routes to feed your city and keep your residents happy – this is even more important than before as population controls – previously set to around 65,000 people – have been done away with. Each map in the game has a preset climate that influences the way weather patterns form. The weather and the population are all set in day-night and annual cycles, so people’s productivity will increase and decrease with the time of year.', @GameId8),
+	   ('https://i.imgur.com/RymhDHC.jpg', 'Story 4', 'The cold winters bring snow and ice, with grey skies, while summer means flooding and extreme events like tornadoes. You must set up disaster response facilities and services within the city to cope with these annual events. These services will be ranged alongside regular policing and fire departments, which have also been improved. You can now assign these services to set areas so their response times are quick and efficient.', @GameId8);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/0tlUXcO.jpg', 'https://www.youtube.com/watch?v=7vlKoMi4Qr0', @GameId8),
+	('https://i.imgur.com/QFaHPdn.jpg', 'https://www.youtube.com/watch?v=WdD66WGBVHM', @GameId8),
+	('https://i.imgur.com/dYG4z5m.jpg', 'https://www.youtube.com/watch?v=eC-gjyvUvGQ', @GameId8),
+    ('https://i.imgur.com/2OjKV9n.jpg', 'https://www.youtube.com/watch?v=T_3p9nGDdEw', @GameId8);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES ('Windows 10 Home 64 Bit', 'Intel Core i7-6700K | AMD Ryzen 5 2600X', '8 GB RAM', 'Nvidia GeForce GTX 970 (4 GB) | AMD Radeon RX 480 (8 GB)', '60 GB available space', 'Windows 10 Home 64 Bit | Windows 11', 'Intel Core i5-12600K | AMD Ryzen 7 5800X', '16 GB RAM', 'Nvidia GeForce RTX 3080 (10 GB) | AMD Radeon RX 6800 XT (16 GB)', '60 GB available space', @GameId8);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Uncharted: Legacy of Thieves Collection', 79.99, 'https://i.imgur.com/7DPh8fP.jpg', 'PlayStation');
+
+DECLARE @GameId9 INT;
+SET @GameId9 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/MQirIn0.jpg', 'Uncharted: Legacy of Thieves Collection', 'pstation.png', 'Standard Edition', 'In stock', '17+', 79.99, @GameId9);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Iron Galaxy Studios, Naughty Dog LLC', '4.20 out of 5.00', @GameId9);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ADVENTURE', 'PARKOUR', 'ACTION', 'COMBAT', 'https://i.imgur.com/3Fxk3VF.jpg', 'ABOUT THE GAME', 'Are You Ready To Seek Your Fortune? Seek your fortune and leave your mark on the map in the UNCHARTED: Legacy of Thieves Collection. Uncover the thrilling cinematic storytelling and the largest blockbuster action set pieces in the UNCHARTED franchise, packed with all the wit, cunning, and over the top moments of the beloved thieves – Nathan Drake and Chloe Frazer.', @GameId9);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/gU3rN7R.jpg', 'Story 1', 'Seek your fortune and leave your mark on the map in the UNCHARTED: Legacy of Thieves Collection. Uncover the thrilling cinematic storytelling and the largest blockbuster action set pieces in the UNCHARTED franchise, packed with all the wit, cunning, and over the top moments of the beloved thieves – Nathan Drake and Chloe Frazer.', @GameId9),
+	   ('https://i.imgur.com/FDczH8v.jpg', 'Story 2', 'In an experience delivered by award winning developer Naughty Dog, the UNCHARTED: Legacy of Thieves Collection includes the two critically-acclaimed, globe-trotting single player adventures from UNCHARTED 4: A Thief’s End and UNCHARTED: The Lost Legacy. Each story is filled with laughs, drama, high octane combat, and a sense of wonder – remastered to be even more immersive.', @GameId9),
+	   ('https://i.imgur.com/osrFhtj.jpg', 'Story 3', 'From thick jungles to snow-capped mountains, exotic islands to rain-soaked streets, explore every inch of stunningly beautiful environments in spectacular detail. Immerse yourself in the cinematic storytelling with super-sharp 4K resolution*, and Ultra-Wide Monitor support**.', @GameId9),
+	   ('https://i.imgur.com/KGVA9Ty.jpg', 'Story 4', 'Several years after his last adventure, retired fortune hunter Nathan Drake, is forced back into the world of thieves. Fate comes calling when Sam, Drake’s presumed dead brother, resurfaces seeking his help to save his own life and offering an adventure Drake can’t resist. Drake’s greatest adventure will test his physical limits, his resolve, and ultimately what he’s willing to sacrifice to save the ones he loves.', @GameId9);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/JQRvfov.jpg', 'https://www.youtube.com/watch?v=F3Wl-OiZCO4', @GameId9),
+	('https://i.imgur.com/FfcCY0x.jpg', 'https://www.youtube.com/watch?v=xeMA3O9pfiY', @GameId9),
+	('https://i.imgur.com/2qirYOk.jpg', 'https://www.youtube.com/watch?v=IfrfJn_-24g', @GameId9);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId9);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('MotoGP 24', 70.95, 'https://i.imgur.com/ra9ePpJ.jpg', 'PlayStation');
+
+DECLARE @GameId10 INT;
+SET @GameId10 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/LyCvcda.jpg', 'MotoGP 24', 'pstation.png', 'Standard Edition', 'In stock', '15+', 70.95, @GameId10);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Milestone S.r.l.', '4.50 out of 5.00', @GameId10);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('RACING', 'MOTORBIKE', 'SPORTS', 'PHYSICS', 'https://i.imgur.com/hZ8uzz2.jpg', 'ABOUT THE GAME', 'Challenge your abilities in MotoGP™, Moto2™ and Moto3™ categories, and immerse yourself in the exhilarating journey of the 2024 campaign. Experience the thrill of official rosters and tracks exclusive to MotoGP™24!AN UNPREDICTABLE CAREEREmbark on your quest to become a MotoGP™ legend and shape your own epic saga.', @GameId10);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/aUpTcal.jpg', 'Story 1', 'Challenge your abilities in MotoGP, Moto2 and Moto3 categories, and immerse yourself in the exhilarating journey of the 2024 campaign. Experience the thrill of official rosters and tracks exclusive to MotoGP24!', @GameId10),
+	   ('https://i.imgur.com/3EKkj4M.jpg', 'Story 2', 'Embark on your quest to become a MotoGP legend and shape your own epic saga. From humble beginnings to triumphant heights, the path is yours to forge. Engage in thrilling rivalries, build your reputation, and leave your mark on the history of your beloved team.But wait, there’s more! As a new season dawns, the winds of change are sweeping through the pit crews.', @GameId10),
+	   ('https://i.imgur.com/sdbOi95.jpg', 'Story 3', 'Did you take a shortcut? Was there irregular contact from the AI? With MotoGP Stewards oversight, individuals who misbehave will face consequences. MotoGP24 raises the stakes for fair play, penalising rule-breakers — no exceptions!', @GameId10),
+	   ('https://i.imgur.com/1py2Wdr.jpg', 'Story 4', 'Whether you’re chasing professional thrills or just starting out, MotoGP24 welcomes you with open arms! With the MotoGP24 Academy and our neural help system, we’ve got your back every step of the way. And introducing our newest ally: Adaptive Difficulty. It tailors your gaming experience to your skills and results, ensuring every ride is uniquely yours!', @GameId10);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/thVetoG.jpg', 'https://www.youtube.com/watch?v=8B-O-m-GDdU', @GameId10),
+	('https://i.imgur.com/Ekqq2ZY.jpg', 'https://www.youtube.com/watch?v=UvknCveQ_wY', @GameId10),
+	('https://i.imgur.com/BNYPuzi.jpg', 'https://www.youtube.com/watch?v=J3MsTZUn7aY', @GameId10);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId10);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Mortal Kombat 11 Ultimate', 49.99, 'https://i.imgur.com/TOloMmz.jpg', 'PlayStation');
+
+DECLARE @GameId11 INT;
+SET @GameId11 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/JPhDrbj.jpg', 'Mortal Kombat 11 Ultimate', 'pstation.png', 'Standard Edition', 'In stock', '18+', 49.99, @GameId11);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'NetherRealm Studios', '4.10 out of 5.00', @GameId11);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'COMBAT', 'FPP', 'FIGHT', 'https://i.imgur.com/DptbBo6.jpg', 'ABOUT THE GAME', 'The definitive MK11 experience! Take control of Earthrealm’s protectors in 2 acclaimed, time-bending Story Campaigns as they race to stop Kronika from rewinding time & rebooting history. Feat. the komplete 37-fighter roster, incl. Rain, Mileena & Rambo. Incl. MK11, Kombat Pack 1, Aftermath Expansion & Kombat Pack 2.', @GameId11);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/Zn6wePK.jpg', 'Story 1', 'The definitive MK11 experience! Take control of Earthrealm’s protectors in 2 acclaimed, time-bending Story Campaigns as they race to stop Kronika from rewinding time & rebooting history. Feat. the komplete 37-fighter roster, incl. Rain, Mileena & Rambo.', @GameId11),
+	   ('https://i.imgur.com/ddKJHdk.jpg', 'Story 2', 'Experience 2 robust, critically acclaimed Story Campaigns from MK11 & MK11: Aftermath. Play as the komplete 37-fighter roster incl. newly added fighters Mileena, Rain & Rambo', @GameId11),
+	   ('https://i.imgur.com/wVvPjXf.jpg', 'Story 3', 'Thousands of skins, weapons & gear for an unprecedented level of customization. Includes all previous guests: Terminator, Joker, Spawn & RoboCop', @GameId11),
+	   ('https://i.imgur.com/aPG3keg.jpg', 'Story 4', 'Every mode including Towers of Time, Krypt, Online, Klassic Towers, etc. All Stages, Stage Fatalities, Brutalities, Iconic Fatalities & Friendships', @GameId11);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/CV1it9Y.jpg', 'https://www.youtube.com/watch?v=f8o9bysnzoQ', @GameId11),
+	('https://i.imgur.com/0s4mydx.jpg', 'https://www.youtube.com/watch?v=WveIrH4efjg', @GameId11),
+	('https://i.imgur.com/PE2xjf7.jpg', 'https://www.youtube.com/watch?v=OEQsQqkEKMA', @GameId11);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId11);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Gran Turismo 7', 59.99, 'https://i.imgur.com/JzDLtOL.jpg', 'PlayStation');
+
+DECLARE @GameId12 INT;
+SET @GameId12 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/m7E1mJO.jpg', 'Gran Turismo 7', 'pstation.png', 'Standard Edition', 'In stock', '15+', 59.99, @GameId12);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'Polyphony Digital', '4.70 out of 5.00', @GameId12);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('RACING', 'SIMULATION', 'ESPORTS', 'MULTIPLAYER', 'https://i.imgur.com/vH3qNeU.jpg', 'ABOUT THE GAME', 'Whether you’re a competitive or casual racer, collector, tuner, livery designer or photographer – find your line with a staggering collection of game modes including fan-favourites like GT Campaign, Arcade and Driving School. With the reintroduction of the legendary GT Simulation Mode, buy, tune, race and sell your way through a rewarding solo campaign as you unlock new cars and challenges.', @GameId12);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/pQCxJHN.jpg', 'Story 1', 'Whether you’re a competitive or casual racer, collector, tuner, livery designer or photographer – find your line with a staggering collection of game modes including fan-favourites like GT Campaign, Arcade and Driving School.', @GameId12),
+	   ('https://i.imgur.com/Vv39IRT.jpg', 'Story 2', 'With the reintroduction of the legendary GT Simulation Mode, buy, tune, race and sell your way through a rewarding solo campaign as you unlock new cars and challenges. And if you love going head-to-head with others, hone your skills and compete in the GT Sport Mode.', @GameId12),
+	   ('https://i.imgur.com/jKGa6rV.jpg', 'Story 3', 'With over 420 cars available at Brand Central and the Used Car Dealership from day one, Gran Turismo 7 recreates the look and feel of classic motors and bleeding-edge supercars alike in unparalleled detail. Each car handles differently and feels unique as you navigate over 90 track routes in dynamic weather conditions, including classic courses from GT history.', @GameId12),
+	   ('https://i.imgur.com/niHKhh2.jpg', 'Story 4', 'The star of the show is the ŠKODA Vision Gran Turismo, an electric single-seater vehicle created for the game. It comes with the AFEELA Prototype 2024 and the Chevrolet Chevelle SS 454 Sport Coupe ’70.', @GameId12);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/MCTRdiD.jpg', 'https://www.youtube.com/watch?v=1tBUsXIkG1A', @GameId12),
+	('https://i.imgur.com/PeIPbbu.jpg', 'https://www.youtube.com/watch?v=oz-O74SmTSQ', @GameId12),
+	('https://i.imgur.com/suuQ3LH.jpg', 'https://www.youtube.com/watch?v=OyAbx6S_VCA', @GameId12);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId12);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('God of War: Ragnarok PS5', 99.99, 'https://i.imgur.com/e1xLtZO.jpg', 'PlayStation');
+
+DECLARE @GameId13 INT;
+SET @GameId13 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/wXwDrJj.jpg', 'God of War: Ragnarok PS5', 'pstation.png', 'Standard Edition', 'In stock', '18+', 99.99, @GameId13);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'Santa Monica Studio', '4.70 out of 5.00', @GameId13);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'ADVENTURE', 'RPG', 'MYTHOLOGY', 'https://i.imgur.com/SRXkThu.jpg', 'ABOUT THE GAME', 'From Santa Monica Studio comes the sequel to the critically acclaimed God of War (2018). Join Kratos and Atreus on a mythic journey for answers before Ragnarök arrives. Together, father and son must put everything on the line as they journey to each of the Nine Realms. Throughout stunning mythological landscapes, they’ll face fearsome enemies – from Norse gods to wild beasts – as they prepare for the showdown of their lives.', @GameId13);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/qRKtqwi.jpg', 'Story 1', 'From Santa Monica Studio comes the sequel to the critically acclaimed God of War (2018).', @GameId13),
+	   ('https://i.imgur.com/vfrRKP4.jpg', 'Story 2', 'Join Kratos and Atreus on a mythic journey for answers before Ragnarök arrives. Together, father and son must put everything on the line as they journey to each of the Nine Realms.', @GameId13),
+	   ('https://i.imgur.com/pqGj4I9.jpg', 'Story 3', 'Armed with his trusty weapons of war – including the Leviathan Axe and the Blades of Chaos – Kratos’ deadly skills will be tested like never before as he fights to protect his family. A host of new abilities for him and Atreus also await, leaving room for fluid, expressive and customizable combat in this epic and unflinching tale.', @GameId13),
+	   ('https://i.imgur.com/o5UPzcq.jpg', 'Story 4', 'Throughout stunning mythological landscapes, they’ll face fearsome enemies – from Norse gods to wild beasts – as they prepare for the showdown of their lives.', @GameId13);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/D5D945W.jpg', 'https://www.youtube.com/watch?v=hfJ4Km46A-0', @GameId13),
+	('https://i.imgur.com/Qxoj2hJ.jpg', 'https://www.youtube.com/watch?v=EE-4GvjKcfs', @GameId13),
+	('https://i.imgur.com/DIAzNtw.jpg', 'https://www.youtube.com/watch?v=dIQGI36BxDE', @GameId13);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId13);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Ghost of Tsushima: Director’s Cut', 109.99, 'https://i.imgur.com/WfMKdPL.jpg', 'PlayStation');
+
+DECLARE @GameId14 INT;
+SET @GameId14 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/6kY4nm8.jpg', 'Ghost of Tsushima: Director’s Cut', 'pstation.png', 'Standard Edition', 'In stock', '18+', 109.99, @GameId14);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', '	Sucker Punch Productions, Nixxes Software', '4.80 out of 5.00', @GameId14);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'ADVENTURE', 'HISTORICAL', 'ACTION RPG', 'https://i.imgur.com/lk0YKKe.jpg', 'ABOUT THE GAME', 'Discover the expanded Ghost of Tsushima experience in this Director’s Cut, featuring all additional content released to date. - Uncover the hidden wonders of Tsushima in this open-world action adventure. - Forge a new path and wage an unconventional war for the freedom of Tsushima. - Challenge opponents with your katana, master the bow to eliminate distant threats and develop stealth tactics to ambush enemies.', @GameId14);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/c065nZZ.jpg', 'Story 1', 'In addition to the excellent Horizon Forbidden West, which will be released on March 21, PC gamers should soon be able to get their hands on yet another PlayStation exclusive.', @GameId14),
+	   ('https://i.imgur.com/jUoAAvL.jpg', 'Story 2', 'Sony hasn’t always been at the forefront of accessibility for players with disabilities. But over the past few years, the Japanese manufacturer has significantly improved, and a new step in the right direction will be taken this week.', @GameId14),
+	   ('https://i.imgur.com/9BieFj6.jpg', 'Story 3', 'Indeed, accessibility tags will appear distinctly on the page of PS5 and PS4 games sold on the PlayStation Store. Note that this novelty will only be available on the PlayStation 5 version of the store. Among these tags, there are mentions about visual features, subtitle options, gameplay, controls, and online communication.', @GameId14),
+	   ('https://i.imgur.com/oapvKrj.jpg', 'Story 4', 'Among the games that support these famous tags are Ghost of Tsushima: Director’s Cut, Marvel’s Spider-Man Remastered, Gran Turismo 7, and God of War Ragnarök. Other titles will be added over time.', @GameId14);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/nXZjOVg.jpg', 'https://www.youtube.com/watch?v=A5gVt028Hww', @GameId14),
+	('https://i.imgur.com/w6jBMUK.jpg', 'https://www.youtube.com/watch?v=EzWBNwhb870', @GameId14),
+	('https://i.imgur.com/lMz8iPe.jpg', 'https://www.youtube.com/watch?v=sc4_dXjkCl8', @GameId14);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId14);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('EA Sports FC 24 PS5', 49.99, 'https://i.imgur.com/Xd4bKQ6.jpg', 'PlayStation');
+
+DECLARE @GameId15 INT;
+SET @GameId15 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/TolaE1c.jpg', 'EA Sports FC 24 PS5', 'pstation.png', 'Standard Edition', 'In stock', '14+', 49.99, @GameId15);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Online play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'EA Canada & EA Romania', '3.70 out of 5.00', @GameId15);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('SPORTS', 'ESPORTS', 'SIMULATION', 'REALISTIC', 'https://i.imgur.com/ep7zT9y.jpg', 'ABOUT THE GAME', 'This game includes optional in-game purchases of virtual currency that can be used to acquire virtual in-game items, including a random selection of virtual in-game items. FC Points not available in Belgium.', @GameId15);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/6oN3CDI.jpg', 'Story 1', 'Good news if you’re an Xbox owner and Game Pass user: you can play EA Sports FC 24 for free this weekend. The promotion ends on January 14 at 11:59pm PT (January 15 at 2:59am ET / 7:59am GMT).', @GameId15),
+	   ('https://i.imgur.com/gSxhWUE.jpg', 'Story 2', 'Do not fret if you’re not a football fan, there’re another six EA Sports titles available this weekend, including Madden NFL 24, NHL 24, F1 23, EA Sports PGA Tour, EA Sports WRC and Super Mega Baseball 4.', @GameId15),
+	   ('https://i.imgur.com/OxqnseA.jpg', 'Story 3', 'EA Sports FC 24 seems to have been a great success over the festive season. The game topped the UK sales charts for December 2023.', @GameId15),
+	   ('https://i.imgur.com/r0FZXcQ.jpg', 'Story 4', 'EA Sports FC 24 was the star of the Black Friday offers from a number of UK retailers, leading it to top the sales charts.', @GameId15);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/Cin2IV3.jpg', 'https://www.youtube.com/watch?v=93mYC42hmW8', @GameId15),
+	('https://i.imgur.com/r1Av52P.jpg', 'https://www.youtube.com/watch?v=IYH05f8GQJA', @GameId15),
+	('https://i.imgur.com/zdmegjl.jpg', 'https://www.youtube.com/watch?v=-vL01jbgENE', @GameId15);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId15);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('The Last Of Us Part II Remastered', 59.99, 'https://i.imgur.com/IZDuUVq.jpg', 'PlayStation');
+
+DECLARE @GameId16 INT;
+SET @GameId16 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/du0De4Q.jpg', 'The Last Of Us Part II Remastered', 'pstation.png', 'Standard Edition', 'In stock', '18+', 59.99, @GameId16);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Naughty Dog LLC', '4.70 out of 5.00', @GameId16);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'ADVENTURE', 'EMOTIONAL', 'THRILLER', 'https://i.imgur.com/VdRQsXb.jpg', 'ABOUT THE GAME', 'Play the winner of over 300 Game of the Year awards, remastered for the PlayStation®5 console. Relive or play for the first time Ellie and Abby’s story, now with graphical enhancements, new gameplay modes like the roguelike survival experience No Return, full DualSense® wireless controller integration, and more.', @GameId16);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/CRKqm1h.jpg', 'Story 1', 'Built for the PS5, The Last of Us Part II Remastered enhances the original PS4 game in ways not possible before. Visual performance now includes native 4K1 output in Fidelity Mode, 1440p upscaled to 4K in Performance Mode, and an Unlocked Framerate option for TVs that support VRR.', @GameId16),
+	   ('https://i.imgur.com/oXkJbLJ.jpg', 'Story 2', 'Experience deep combat via an entirely new mode! Survive as long as you can in each run as you choose your path through a series of randomized encounters featuring different foes and memorable locations from throughout The Last of Us Part II, all culminating in tense boss battles.', @GameId16),
+	   ('https://i.imgur.com/4lUwaZr.jpg', 'Story 3', 'The beautiful yet dangerous world of The Last of Us Part II Remastered is brought to new life on the PS5.', @GameId16),
+	   ('https://i.imgur.com/LKx49iY.jpg', 'Story 4', 'Delve deeper into this beloved adventure and learn how the original game was created. Lost Levels let you explore early-development versions of three new levels not seen in the original The Last of Us Part II: Sewers, Jackson Party and Boar Hunt.', @GameId16);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/RcIkE6l.jpg', 'https://www.youtube.com/watch?v=Ye3st9z6jQY', @GameId16),
+	('https://i.imgur.com/ZFkIhzZ.jpg', 'https://www.youtube.com/watch?v=-llaUBqovHw', @GameId16),
+	('https://i.imgur.com/hHI9QyW.jpg', 'https://www.youtube.com/watch?v=kmy8I6xvFIU', @GameId16);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId16);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Assassin’s Creed Mirage - Master Assassin Edition', 139.99, 'https://i.imgur.com/GEH69w1.jpg', 'Xbox');
+
+DECLARE @GameId17 INT;
+SET @GameId17 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/HwdoSaR.jpg', 'Assassin’s Creed Mirage - Master Assassin Edition', 'xbox.png', 'Standard Edition', 'In stock', '18+', 139.99, @GameId17);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Ubisoft', '4.30 out of 5.00', @GameId17);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ACTION', 'ADVENTURE', 'XBOX LIVE', 'XBOX ONE', 'https://i.imgur.com/BYHOFL8.jpg', 'ABOUT THE GAME', 'Includes the base game and six additional packs: - Deluxe Pack: Prince of Persia–inspired pack containing an outfit, a sword, a dagger, a mount skin, an eagle skin, a talisman, and an outfit dye. - Lightning Pack: Deadly weapons pack containing both a sword and a dagger. - Jinn Pack: Dress yourself as a jinni with this pack containing an outfit, a sword, and a dagger.', @GameId17);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/6RYMaQZ.jpg', 'Story 1', 'Deluxe Pack: Prince of Persia–inspired pack containing an outfit, a sword, a dagger, a mount skin, an eagle skin, a talisman, and an outfit dye.', @GameId17),
+	   ('https://i.imgur.com/M2Nd31G.jpg', 'Story 2', 'Lightning Pack: Deadly weapons pack containing both a sword and a dagger.', @GameId17),
+	   ('https://i.imgur.com/kQnOVYx.jpg', 'Story 3', 'Experience the story of Basim, a cunning street thief seeking answers and justice as he navigates the bustling streets of ninth-century Baghdad. Through a mysterious, ancient organization known as the Hidden Ones, he will become a deadly Master Assassin and change his fate in ways he never could have imagined.', @GameId17);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/bH1Txsn.jpg', 'https://www.youtube.com/watch?v=IRNOoOYVn80', @GameId17),
+	('https://i.imgur.com/ixV7rzg.jpg', 'https://www.youtube.com/watch?v=qJ8HRvLQmYE', @GameId17),
+	('https://i.imgur.com/vehXjOm.jpg', 'https://www.youtube.com/watch?v=Rh-3zAcJu4o', @GameId17);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId17);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Assetto Corsa Ultimate Edition', 29.99, 'https://i.imgur.com/9rtgXCh.jpg', 'Xbox');
+
+DECLARE @GameId18 INT;
+SET @GameId18 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/81KBWl5.jpg', 'Assetto Corsa Ultimate Edition', 'xbox.png', 'Ultimate Edition', 'In stock', '14+', 29.99, @GameId18);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Kunos Simulazioni', '4.00 out of 5.00', @GameId18);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('RACING', 'SIMULATION', 'INDIES', 'SPORTS', 'https://i.imgur.com/rjhfkck.jpg', 'ABOUT THE GAME', 'Assetto Corsa: Ultimate Edition is the most complete version of the universally acclaimed driving simulator, offering all the DLC & updates ever released for the game (Dream Pack 1-2-3, Tripl3Pack, Porsche Pack 1-2-3, Red Pack, Ready To Race, Japanese Pack and Ferrari 70th Anniversary DLCs).', @GameId18);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/LqHcgwT.jpg', 'Story 1', 'Assetto Corsa: Ultimate Edition is the most complete version of the universally acclaimed driving simulator, offering all the DLC & updates ever released for the game (Dream Pack 1-2-3, Tripl3Pack, Porsche Pack 1-2-3, Red Pack, Ready To Race, Japanese Pack and Ferrari 70th Anniversary DLCs).', @GameId18),
+	   ('https://i.imgur.com/sCycQdI.jpg', 'Story 2', 'Choose from 178 meticulously detailed vehicles - their handling and performance modeling taken from real track data & telemetry - and 19 legendary circuits (including Spa Francorchamps, Nürburgring-Nordschleife, Laguna Seca & many others) with 40 different track configurations, recreated through laser-scan to deliver the highest accuracy possible.', @GameId18),
+	   ('https://i.imgur.com/bxK8q1q.jpg', 'Story 3', 'Enjoy all the race modes in Single player or compete with friends in online multiplayer. Customize the driving experience by adjusting the handling and race set-up to match personal racing styles. With its advanced physics engine including features and aspects of real cars, Assetto Corsa: Ultimate Edition offers a level of realism never experienced before..', @GameId18);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/Cll3xXP.jpg', 'https://www.youtube.com/watch?v=TDFN-E30jhU', @GameId18),
+	('https://i.imgur.com/6RGVWtB.jpg', 'https://www.youtube.com/watch?v=-6X29LcfWsQ', @GameId18),
+	('https://i.imgur.com/cOVL0jZ.jpg', 'https://www.youtube.com/watch?v=ItqUqpNxZNc', @GameId18);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId18);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Call of Duty: Black Ops Cold War Cross-Gen Bundle', 45.99, 'https://i.imgur.com/reLVdJM.jpg', 'Xbox');
+
+DECLARE @GameId19 INT;
+SET @GameId19 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/loCYPgE.jpg', 'Call of Duty: Black Ops Cold War Cross-Gen Bundle', 'xbox.png', 'Cross-Gen Bundle', 'In stock', '18+', 45.99, @GameId19);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Online play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'Treyarch', '4.50 out of 5.00', @GameId19);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('SHOOTER', 'COOPERATION', 'ONLINE CO-OP', 'SP', 'https://i.imgur.com/EF9k6ir.jpg', 'ABOUT THE GAME', 'Buy this digital Xbox One version of Call of Duty®: Black Ops Cold War from the Microsoft Store and download the Xbox Series X|S version at no extra cost. The Cross-Gen Bundle includes: - Cross-Gen Bundle of Call of Duty®: Black Ops Cold War game -- Includes Xbox One and Xbox Series X|S version - Confrontation Weapons Pack - Legendary Captain Price Operator Skin', @GameId19);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/t2GrHRY.jpg', 'Story 1', 'Black Ops Cold War will drop fans into the depths of the Cold War’s volatile geopolitical battle of the early 1980s. Nothing is ever as it seems in a gripping single-player Campaign, where players will come face-to-face with historical figures and hard truths, as they battle around the globe through iconic locales like East Berlin, Vietnam, Turkey, Soviet KGB headquarters and more.', @GameId19),
+	   ('https://i.imgur.com/24XwIOS.jpg', 'Story 2', 'As elite operatives, you will follow the trail of a shadowy figure named Perseus who is on a mission to destabilize the global balance of power and change the course of history. Descend into the dark center of this global conspiracy alongside iconic characters Woods, Mason and Hudson and a new cast of Operatives attempting to stop a plot decades in the making.', @GameId19),
+	   ('https://i.imgur.com/6WVeBQw.jpg', 'Story 3', 'All existing owners and future purchasers of Black Ops Cold War will receive the Legendary Captain Price Operator. Buy Black Ops Cold War and log in to receive this free in-game Legendary Operator Skin. Usable in Black Ops Cold War.', @GameId19);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/OXJUsSQ.jpg', 'https://www.youtube.com/watch?v=k7Um0RShjio', @GameId19),
+	('https://i.imgur.com/YhbG2KL.jpg', 'https://www.youtube.com/watch?v=aTS9n_m7TW0', @GameId19);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId19);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Forza Horizon 5', 59.99, 'https://i.imgur.com/RY2gWRj.jpg', 'Xbox');
+
+DECLARE @GameId20 INT;
+SET @GameId20 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/7ZD8gju.jpg', 'Forza Horizon 5', 'xbox.png', 'Standard Edition', 'In stock', '14+', 59.99, @GameId20);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Online play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'Playground Games', '4.20 out of 5.00', @GameId20);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('RACING', 'COOPERATION', 'ONLINE CO-OP', 'ACTION', 'https://i.imgur.com/2Dakn34.jpg', 'ABOUT THE GAME', 'Forza Horizon 5 for PC is a racing simulation game set in a number of beautiful locations around Mexico. It is the fifth game in the Forza Horizon series, and the twelfth main game from the overall Forza franchise. About the Game In this game, you can explore a truly massive open world map, as much as fifty percent larger than Forza Horizon 4’s not inconsiderable map.', @GameId20);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/kokmIZJ.jpg', 'Story 1', 'Forza Horizon 5 for PC is a racing simulation game set in a number of beautiful locations around Mexico. It is the fifth game in the Forza Horizon series, and the twelfth main game from the overall Forza franchise.', @GameId20),
+	   ('https://i.imgur.com/EXiuTwk.jpg', 'Story 2', 'In this game, you can explore a truly massive open world map, as much as fifty percent larger than Forza Horizon 4’s not inconsiderable map. Race a variety of vehicles through a volcanos’ caldera, explore jungles and rainforests for their hidden ruined cities, spray sand up as you zoom over beaches, as well as racing past waterfalls, snowy mountains, and large reality-based cities like Guanajuato which comes with a network of secret tunnels to explore!', @GameId20),
+	   ('https://i.imgur.com/MUGvDPj.jpg', 'Story 3', 'Mexico is a vast country, and it has amazingly diverse climates depending on where in the country you are, and the game developers have taken pains to give you the full Mexican climate experience in this game! The four seasons behave differently in each of the eleven diverse biomes – and just like in real life, you drive through weather events: getting rained on in the mountain, and then drive out into blazing sunshine in the desert!', @GameId20);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/Xk8tyub.jpg', 'https://www.youtube.com/watch?v=YY2GX_7wR7Y', @GameId20),
+	('https://i.imgur.com/YIkUvb3.jpg', 'https://www.youtube.com/watch?v=Rv7xLt5yNsM', @GameId20),
+	('https://i.imgur.com/7kzu8OL.jpg', 'https://www.youtube.com/watch?v=FYH9n37B7Yw', @GameId20);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId20);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Grand Theft Auto V: Premium Edition', 29.99, 'https://i.imgur.com/7A5yaw0.jpg', 'Xbox');
+
+DECLARE @GameId21 INT;
+SET @GameId21 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/Cv9ZiXm.jpg', 'Grand Theft Auto V: Premium Edition', 'xbox.png', 'Premium Edition', 'In stock', '18+', 29.99, @GameId21);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Rockstar North', '4.80 out of 5.00', @GameId21);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('SP', 'ADVENTURE', 'ONLINE', 'ACTION', 'https://i.imgur.com/GWVuIfD.jpg', 'ABOUT THE GAME', 'The Grand Theft Auto V: Premium Edition includes the complete Grand Theft Auto V story experience, free access to the ever evolving Grand Theft Auto Online and all existing gameplay upgrades and content including The Cayo Perico Heist, The Diamond Casino & Resort, The Diamond Casino Heist, Gunrunning and much more. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in Grand Theft Auto Online', @GameId21);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/QlfYB7P.jpg', 'Story 1', 'When a young street hustler, a retired bank robber and a terrifying psychopath land themselves in trouble, they must pull off a series of dangerous heists to survive in a city in which they can trust nobody, least of all each other.', @GameId21),
+	   ('https://i.imgur.com/yy5XkiZ.jpg', 'Story 2', 'The Criminal Enterprise Starter Pack is the fastest way for new GTA Online players to jumpstart their criminal empires with the most exciting and popular content plus $1,000,000 bonus cash to spend in GTA Online - all content valued at over GTA$10,000,000 if purchased separately.', @GameId21),
+	   ('https://i.imgur.com/2anJLVl.jpg', 'Story 3', 'Launch business ventures from your Maze Bank West Executive Office, research powerful weapons technology from your underground Gunrunning Bunker and use your Counterfeit Cash Factory to start a lucrative counterfeiting operation.', @GameId21);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/UiZcc3L.jpg', 'https://www.youtube.com/watch?v=0wIzQC54ySk', @GameId21),
+	('https://i.imgur.com/qLs1OoM.jpg', 'https://www.youtube.com/watch?v=3DBrG2YjqQA', @GameId21),
+	('https://i.imgur.com/JYYUD1F.jpg', 'https://www.youtube.com/watch?v=hvoD7ehZPcM', @GameId21);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId21);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Star Wars Jedi: Fallen Order', 14.99, 'https://i.imgur.com/M6Iv3nA.jpg', 'Xbox');
+
+DECLARE @GameId22 INT;
+SET @GameId22 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/zWuwy6l.jpg', 'Star Wars Jedi: Fallen Order', 'xbox.png', 'Standard Edition', 'In stock', '16+', 14.99, @GameId22);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Respawn Entertainment', '2.90 out of 5.00', @GameId22);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('SP', 'ADVENTURE', 'SCI-FI', 'ACTION', 'https://i.imgur.com/ogjUmil.jpg', 'ABOUT THE GAME', 'A galaxy-spanning adventure awaits in Star Wars Jedi: Fallen Order, a new third-person action-adventure title from Respawn Entertainment. This narratively driven, single-player game puts you in the role of a Jedi Padawan who narrowly escaped the purge of Order 66 following the events of Episode 3: Revenge of the Sith.', @GameId22);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/QsEEooJ.jpg', 'Story 1', 'A galaxy-spanning adventure awaits in Star Wars Jedi: Fallen Order, a new third-person action-adventure title from Respawn Entertainment. This narratively driven, single-player game puts you in the role of a Jedi Padawan who narrowly escaped the purge of Order 66 following the events of Episode 3.', @GameId22),
+	   ('https://i.imgur.com/Y3rypKy.jpg', 'Story 2', 'Revenge of the Sith. On a quest to rebuild the Jedi Order, you must pick up the pieces of your shattered past to complete your training, develop new powerful Force abilities and master the art of the iconic lightsaber - all while staying one step ahead of the Empire and its deadly Inquisitors.', @GameId22),
+	   ('https://i.imgur.com/ZG92NNr.jpg', 'Story 3', 'While mastering your abilities, players will engage in cinematically charged lightsaber and Force combat designed to deliver the kind of intense Star Wars lightsaber battles as seen in the films. Players will need to approach enemies strategically, sizing up strengths and weaknesses while cleverly utilizing your Jedi training to overcome your opponents and solve the mysteries that lay in your path.', @GameId22);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/e6klPU1.jpg', 'https://www.youtube.com/watch?v=1wWkQXUMQYI', @GameId22),
+	('https://i.imgur.com/afDEvar.jpg', 'https://www.youtube.com/watch?v=0GLbwkfhYZk', @GameId22),
+	('https://i.imgur.com/U5Avoex.jpg', 'https://www.youtube.com/watch?v=Kvi_D2LtL-4', @GameId22);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId22);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Tom Clancy’s Rainbow Six Siege Deluxe Edition', 21.99, 'https://i.imgur.com/XXGZ4KW.jpg', 'Xbox');
+
+DECLARE @GameId23 INT;
+SET @GameId23 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/RVp2Qor.jpg', 'Tom Clancy’s Rainbow Six Siege Deluxe Edition', 'xbox.png', 'Deluxe Edition', 'In stock', '18+', 21.99, @GameId23);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Ubisoft Montreal', '3.90 out of 5.00', @GameId23);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('SP', 'CLOUD GAMING', 'SHOOTER', 'ACTION', 'https://i.imgur.com/VjUOvZm.jpg', 'ABOUT THE GAME', 'One of the best first-person shooters ever made. 10\10” – GameSpot Tom Clancy’s Rainbow Six Siege is an elite, realistic, tactical team-based shooter where superior planning and execution triumph. It features 5v5 attack vs. defense gameplay and intense close-quarters combat in destructible environments.', @GameId23);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/ZYGNpRl.jpg', 'Story 1', 'Tom Clancy’s Rainbow Six Siege is an elite, realistic, tactical team-based shooter where superior planning and execution triumph. It features 5v5 attack vs. defense gameplay and intense close-quarters combat in destructible environments.', @GameId23),
+	   ('https://i.imgur.com/q4htaFw.jpg', 'Story 2', 'On defense, coordinate with your team to transform your environments into strongholds. Trap, fortify and create defensive systems to prevent being breached by the enemy. On attack, lead your team through narrow corridors, barricaded doorways and reinforced walls. Combine tactical maps, observation drones, rappelling and more to plan, attack and defuse every situation.', @GameId23),
+	   ('https://i.imgur.com/prlIzBn.jpg', 'Story 3', 'Choose from dozens of highly trained, Special Forces operators from around the world. Deploy the latest technology to track enemy movement. Shatter walls to open new lines of fire. Breach ceilings and floors to create new access points. Employ every weapon and gadget from your deadly arsenal to locate, manipulate and destroy your enemies and the environment around them.', @GameId23);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/5hX4g2w.jpg', 'https://www.youtube.com/watch?v=-TKfvTHRM6E', @GameId23),
+	('https://i.imgur.com/lMiSRP9.jpg', 'https://www.youtube.com/watch?v=m58Dtp_Lgkc', @GameId23),
+	('https://i.imgur.com/Kj8JCAb.jpg', 'https://www.youtube.com/watch?v=VMrCY9uw3Oc', @GameId23);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId23);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('TopSpin 2K25 Cross-Gen Edition', 109.99, 'https://i.imgur.com/cakhZ2V.jpg', 'Xbox');
+
+DECLARE @GameId24 INT;
+SET @GameId24 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/e2uljJN.jpg', 'TopSpin 2K25 Cross-Gen Edition', 'xbox.png', 'Cross-Gen Edition', 'In stock', '14+', 109.99, @GameId24);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'Hangar 13', '4.10 out of 5.00', @GameId24);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('REALISTIC', 'SIMULATION', 'SPORTS', 'XBOX LIVE', 'https://i.imgur.com/1NdR91t.jpg', 'ABOUT THE GAME', 'WIN THE CAREER GRAND SLAM®Travel the world as an up-and-coming pro, go toe-to-toe with the biggest names in tennis, and take Centre Court at Wimbledon, Roland-Garros, the US Open, and the Australian Open as you strive to become a Grand Slam® Champion in MyCAREER.COMPETE AT ICONIC VENUES.', @GameId24);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/45DhpBb.jpg', 'Story 1', 'Travel the world as an up-and-coming pro, go toe-to-toe with the biggest names in tennis, and take Centre Court at Wimbledon, Roland-Garros, the US Open, and the Australian Open as you strive to become a Grand Slam Champion in MyCAREER.', @GameId24),
+	   ('https://i.imgur.com/mlhw5ZO.jpg', 'Story 2', 'Visit some of the most vibrant courts on the tennis circuit in TopSpin 2K25. From the four Grand Slam tournaments to larger-than-life international arenas like Indian Wells, La Caja Mágica, Pala Alpitour, Foro Italico, and more.', @GameId24),
+	   ('https://i.imgur.com/RulTHhZ.jpg', 'Story 3', 'Play as tennis legends Roger Federer and Serena Williams, or serve up smashing highlights as Carlos Alcaraz, Iga Swiatek, Frances Tiafoe, Andre Agassi, and others. Choose from over 24 playable pros and unleash their explosive power and clever finesse against other players locally or online.', @GameId24);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/jU0iWkx.jpg', 'https://www.youtube.com/watch?v=-TKfvTHRM6E', @GameId24),
+	('https://i.imgur.com/gPORDqY.jpg', 'https://www.youtube.com/watch?v=m58Dtp_Lgkc', @GameId24),
+	('https://i.imgur.com/FD2Dl3O.jpg', 'https://www.youtube.com/watch?v=VMrCY9uw3Oc', @GameId24);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId24);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Super Mario Party', 89.99, 'https://i.imgur.com/yOe8vxi.jpg', 'Nintendo');
+
+DECLARE @GameId25 INT;
+SET @GameId25 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/HqtngWY.jpg', 'Super Mario Party', 'sw.png', 'Standard Edition', 'In stock', '6+', 89.99, @GameId25);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Online play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'Nd Cube', '4.90 out of 5.00', @GameId25);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ENTERTAINMENT', 'MULTIPLAYER', 'NINTENDO', 'OTHER', 'https://i.imgur.com/ltsmgFM.jpg', 'ABOUT THE GAME', 'Super Mario Party for Nintendo Switch is the eleventh game in the series but the first that has been released for the Switch, and the makers of the game have gone out of their way to ensure that this new platform embraces the silly zany quirkiness of the other games while offering smooth gameplay, intuitive controls and multiplayer fun for all.', @GameId25);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/9oWiOCw.jpg', 'Story 1', 'Each character has their own dice in this version, so do choose carefully as the dice allow you to use powers that the other players will not have. Of course, your character will also have flaws or weaknesses that the others don’t have too, so you should be mindful of those! Play as many characters as you can and see which characters and their powers suit your style of play the best.', @GameId25),
+	   ('https://i.imgur.com/wQP4dGk.jpg', 'Story 2', 'Players have a lot of agency, moving around the board at will, more or less, rather than all being crammed into a vehicle to be taken to the next play station. You do need to wait a little while longer for other players to all have their turn and trigger the next mini game, but the difference is negligible and you will hardly notice the wait as you anticipate winning the next star or beating your sister in the next minigame!', @GameId25);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/JjDsXAC.jpg', 'https://www.youtube.com/watch?v=D7zTJLIYJds', @GameId25),
+	('https://i.imgur.com/yUzKO9O.jpg', 'https://www.youtube.com/watch?v=6lrihmd9Exo', @GameId25);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId25);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Assassin’s Creed: The Rebel Collection', 29.99, 'https://i.imgur.com/6VQ3M4w.jpg', 'Nintendo');
+
+DECLARE @GameId26 INT;
+SET @GameId26 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/vG8mCeT.jpg', 'Assassin’s Creed: The Rebel Collection', 'sw.png', 'Standard Edition', 'In stock', '16+', 29.99, @GameId26);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Ubisoft Montreal', '4.30 out of 5.00', @GameId26);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ENTERTAINMENT', 'ACTION', 'NINTENDO', 'ADVENTURE', 'https://i.imgur.com/apzqua8.jpg', 'ABOUT THE GAME', 'Get two action-packed games and all past single-player DLC with Assassin’s Creed®: The Rebel Collection. Become the most feared pirate in the Caribbean in Assassin’s Creed® IV: Black Flag then transform into the ultimate assassin hunter in Assassin’s Creed® Rogue.', @GameId26);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/T9fD6P8.jpg', 'Story 1', 'Get two action-packed games and all past single-player DLC with Assassin’s Creed: The Rebel Collection. Become the most feared pirate in the Caribbean in Assassin’s Creed IV: Black Flag then transform into the ultimate assassin hunter in Assassin’s Creed Rogue.', @GameId26),
+	   ('https://i.imgur.com/22J3FUr.jpg', 'Story 2', 'Includes both Assassin’s Creed IV: Black Flag and Assassin’s Creed Rogue, and all past single-player DLC. Experience enhanced features - Handheld mode, HD Rumble, touch screen interface, and motion control aiming.', @GameId26);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/MSejpKu.jpg', 'https://www.youtube.com/watch?v=69z9nLvIUSQ', @GameId26),
+	('https://i.imgur.com/B1g1117.jpg', 'https://www.youtube.com/watch?v=OsQs7Azz0aw', @GameId26);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId26);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Monopoly', 24.99, 'https://i.imgur.com/WijHJil.jpg', 'Nintendo');
+
+DECLARE @GameId27 INT;
+SET @GameId27 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/qq5VWdu.jpg', 'Monopoly', 'sw.png', 'Standard Edition', 'In stock', '10+', 24.99, @GameId27);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Online play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'Ubisoft', '4.50 out of 5.00', @GameId27);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('PARTY', 'BOARD GAME', 'NINTENDO', 'ECONOMY', 'https://i.imgur.com/6SBWSGZ.jpg', 'ABOUT THE GAME', 'Grow your empire anywhere, anytime, with Monopoly for Nintendo Switch! Immerse yourself in a mix of the original family-favourite board game, enriched with new ways to play: Trading your way to success has never been so fun! Choose among three lively 3D boards Play on-the-go, with up to six players (offline and online*) Not enough time for a full game?', @GameId27);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/REAAWK4.jpg', 'Story 1', 'Grow your empire anywhere, anytime, with Monopoly for Nintendo Switch! Immerse yourself in a mix of the original family-favourite board game, enriched with new ways to play: Not enough time for a full game? Enjoy new modes for faster sessions', @GameId27),
+	   ('https://i.imgur.com/2BbazS1.jpg', 'Story 2', 'Choose among three lively 3D boards. Play on-the-go, with up to six players (offline and online*). Select your own rules and spice things up with the new Actions Cards.', @GameId27);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/K1RRIEh.jpg', 'https://www.youtube.com/watch?v=556y52Ws8Mc', @GameId27),
+	('https://i.imgur.com/olhTds5.jpg', 'https://www.youtube.com/watch?v=yy9jmQnbUXE', @GameId27);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId27);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('LEGO Harry Potter Collection', 27.99, 'https://i.imgur.com/3Rcg0zc.jpg', 'Nintendo');
+
+DECLARE @GameId28 INT;
+SET @GameId28 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/HDcbsvS.jpg', 'LEGO Harry Potter Collection', 'sw.png', 'Standard Edition', 'In stock', '10+', 27.99, @GameId28);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Online play enabled', 'Digital game key', 'Game Help supported', 'Multiplayer', 'TT Games', '4.50 out of 5.00', @GameId28);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('XBOX LIVE', 'ACTION', 'NINTENDO', 'ADVENTURE', 'https://i.imgur.com/1161o0Q.jpg', 'ABOUT THE GAME', 'Grow your empire anywhere, anytime, with Monopoly for Nintendo Switch! Immerse yourself in a mix of the original family-favourite board game, enriched with new ways to play: Trading your way to success has never been so fun! Choose among three lively 3D boards Play on-the-go, with up to six players (offline and online*) Not enough time for a full game?', @GameId28);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/qv7R2GI.jpg', 'Story 1', 'The LEGO Harry Potter Collection brings LEGO Harry Potter: Years 1-4 and LEGO Harry Potter: Years 5-7 remastered! This compilation unites the creative prowess of LEGO and the expansive world of Harry Potter, with an exciting journey full of spell-casting, potion-making, puzzle-solving, lessons, dueling and much more for players of all ages to enjoy.', @GameId28),
+	   ('https://i.imgur.com/uWVRTwz.jpg', 'Story 2', 'Gamescom is just around the corner, and a new LEGO game could be announced pretty soon. Indeed, the Video Games Chronicle website claims to have received a screenshot of an advert inadvertently posted on Instagram by South African branch of Warner Bros.', @GameId28);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/JqsPnIf.jpg', 'https://www.youtube.com/watch?v=yUl5qZa-9Hg', @GameId28),
+	('https://i.imgur.com/IJb1pKV.jpg', 'https://www.youtube.com/watch?v=6-DZpDNQ9Tc', @GameId28);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId28);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Lego City: Undercover', 23.99, 'https://i.imgur.com/HiGIeSV.jpg', 'Nintendo');
+
+DECLARE @GameId29 INT;
+SET @GameId29 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/HAerBq5.jpg', 'Lego City: Undercover', 'sw.png', 'Standard Edition', 'In stock', '10+', 23.99, @GameId29);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Traveller’s Tales', '3.00 out of 5.00', @GameId29);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('LEGO', 'ACTION', 'NINTENDO', 'ADVENTURE', 'https://i.imgur.com/ua1WSIg.jpg', 'ABOUT THE GAME', 'Join the Chase! In LEGO® CITY Undercover, play as Chase McCain, a police officer who’s been tasked with going undercover to hunt down the notorious – and recently escaped – criminal Rex Fury and putting an end to his city-wide crime wave.', @GameId29);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/TOBBLlw.jpg', 'Story 1', 'Join the Chase! In LEGO CITY Undercover, play as Chase McCain, a police officer who’s been tasked with going undercover to hunt down the notorious – and recently escaped – criminal Rex Fury and putting an end to his city-wide crime wave.', @GameId29),
+	   ('https://i.imgur.com/gGVL8Zs.jpg', 'Story 2', 'With two player co-op, friends can explore the sprawling open-world metropolis that is LEGO City, with more than 20 unique districts to investigate, car thieves to bust, hilarious movie references to discover, vehicles to drive, and hundreds of collectibles. LEGO CITY Undercover brings together witty, original storytelling with signature LEGO humor to create a fun-filled experience for players of all ages to enjoy.', @GameId29);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/9rBp3WN.jpg', 'https://www.youtube.com/watch?v=X6jxoFZeq-w', @GameId29),
+	('https://i.imgur.com/eWW8S90.jpg', 'https://www.youtube.com/watch?v=JwOHNI-SZms', @GameId29);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId29);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Crysis Remastered Trilogy', 26.99, 'https://i.imgur.com/hphj77P.jpg', 'Nintendo');
+
+DECLARE @GameId30 INT;
+SET @GameId30 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/P9qIh7P.jpg', 'Crysis Remastered Trilogy', 'sw.png', 'Standard Edition', 'In stock', '16+', 26.99, @GameId30);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'Crytek', '4.20 out of 5.00', @GameId30);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('LEGO', 'ACTION', 'FPS', 'ADVENTURE', 'https://i.imgur.com/wqsPNOX.jpg', 'ABOUT THE GAME', 'Crysis Remastered Trilogy includes: Crysis Remastered: What begins as a simple rescue mission becomes the battleground of a new war as alien invaders swarm over a chain of North Korean islands. Playing as super-soldier Prophet, you are armed with a powerful Nanosuit equipped with Speed, Strength, Armor, and Cloaking abilities.', @GameId30);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/iC3UGmC.jpg', 'Story 1', 'What begins as a simple rescue mission becomes the battleground of a new war as alien invaders swarm over a chain of North Korean islands. Playing as super-soldier Prophet, you are armed with a powerful Nanosuit equipped with Speed, Strength, Armor, and Cloaking abilities. Use a vast arsenal of modular weaponry and adapt your tactics and gear to dominate enemies in an enormous sandbox world.', @GameId30),
+	   ('https://i.imgur.com/GHVIPZV.jpg', 'Story 2', 'Aliens have returned to a world ravaged by climate disasters. As the invaders lay waste to New York and begin an assault that threatens the total annihilation of humankind, only you have the technology to lead the fightback. Equipped with the upgraded Nanosuit 2.0, customize your suit and weapons in real-time and unlock powerful new abilities in the battle for humanity’s survival.', @GameId30);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/77wATPp.jpg', 'https://www.youtube.com/watch?v=SwtbBDoOitU', @GameId30),
+	('https://i.imgur.com/4fneTFY.jpg', 'https://www.youtube.com/watch?v=Q1PGzEE5jWY', @GameId30);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId30);
+
+INSERT INTO Games (GameName, GamePrice, GameImgPath, GamePlatform)
+VALUES ('Dragon Ball Xenoverse 2', 21.99, 'https://i.imgur.com/KxjlNba.jpg', 'Nintendo');
+
+DECLARE @GameId31 INT;
+SET @GameId31 = SCOPE_IDENTITY();
+
+INSERT INTO Buys (BuyWallImgPath, BuyName, BuyPlatImgPath, BuyGameEdition, BuyStockGame, BuyAgeRestrict, BuyPrice, IdGame)
+VALUES ('https://i.imgur.com/Lf7zd1l.jpg', 'Dragon Ball Xenoverse 2', 'sw.png', 'Standard Edition', 'In stock', '14+', 21.99, @GameId31);
+
+INSERT INTO Cates (CateOfOn, CateDigKey, CateGameSupp, CatePlayer, CateDev, CateRevNum, IdGame)
+VALUES ('Offline play enabled', 'Digital game key', 'Game Help supported', '1 player', 'DIMPS, QLOC', '3.80 out of 5.00', @GameId31);
+
+INSERT INTO Tips (TipGame1, TipGame2, TipGame3, TipGame4, TipBannPath, TipAboutGame, TipTextGame, IdGame)
+VALUES ('ANIME', 'ACTION', 'FIGHTING', 'ADVENTURE', 'https://i.imgur.com/bk7LGmg.jpg', 'ABOUT THE GAME', 'YOUR STORY, YOUR AVATAR, YOUR DRAGON BALL WORLD Dragon Ball Xenoverse 2 is the ultimate Dragon Ball gaming experience, packed with thrilling action, epic battles, and endless customization options. Create your own character, explore Conton City and team up with iconic characters from the series as a teacher to train and be ready to battle against formidable enemies to rescue the flow of History!', @GameId31);
+
+INSERT INTO Galls (GallImgPath, GallImgTitle, GallImgDesc, IdGame)
+VALUES ('https://i.imgur.com/xYP55Oq.jpg', 'Story 1', 'Dragon Ball Xenoverse 2 is the ultimate Dragon Ball gaming experience, packed with thrilling action, epic battles, and endless customization options. Create your own character, explore Conton City and team up with iconic characters from the series as a teacher to train and be ready to battle against formidable enemies to rescue the flow of History!', @GameId31),
+	   ('https://i.imgur.com/XkiLzFE.jpg', 'Story 2', 'The fun doesn’t stop there! Dragon Ball Xenoverse 2 also features online multiplayer modes, where you can battle against other players from around the world in epic showdowns or participate in Raid Battles to face gigantic foes with other players.', @GameId31);
+
+INSERT INTO Trailers (TraImgPath, TraLink, IdGame)
+VALUES ('https://i.imgur.com/WmlWNzM.jpg', 'https://www.youtube.com/watch?v=_H9DuhG4OK8', @GameId31),
+	('https://i.imgur.com/jYnlUda.jpg', 'https://www.youtube.com/watch?v=mImC9oinZDs', @GameId31);
+
+INSERT INTO Specs (SpecOSMin, SpecProcMin, SpecMemMin, SpecGrapMin, SpecStorMin, SpecOSMax, SpecProcMax, SpecMemMax, SpecGrapMax, SpecStorMax, IdGame)
+VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, @GameId31);

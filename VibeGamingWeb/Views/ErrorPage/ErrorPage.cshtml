@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "- Oops";
+    Layout = "~/Views/Shared/_VibeMain.cshtml";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/errorpage.css" />
+</head>
+<div id="particles-js"></div>
+<script src="/js/particles.min.js"></script>
+<script src="/js/particles.js"></script>
+<div class="error-container">
+    <a href="@Url.Action("VPage", "MainPage")">
+        <img src="~/logoimages/err404.png" alt="Error 404">
+    </a>
+</div>

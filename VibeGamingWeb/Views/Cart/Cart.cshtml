@@ -1,0 +1,91 @@
+﻿@model List<VibeGamingWeb.Models.DBEntities.VibeCart>
+@{
+    ViewData["Title"] = "- Cart";
+    Layout = "~/Views/Shared/_VibeMain.cshtml";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/cart.css" />
+</head>
+<header class="header-container">
+    <a href="@Url.Action("VPage", "MainPage")" title="Home" class="logo-vg"></a>
+    <div class="check-container">
+        <div class="check-glass">
+            <div class="check-circle activ">
+                <div class="check-num ac">1</div>
+            </div>
+            <div class="check-text ac">Shopping cart</div>
+        </div>
+        <div class="check-glass">
+            <div class="check-line"></div>
+            <div class="check-circle">
+                <div class="check-num">2</div>
+            </div>
+            <div class="check-text">Payment</div>
+        </div>
+    </div>
+</header>
+<div class="cart-container">
+    <div class="cart-container2" id="cart-content">
+        <div class="cart-title">Cart</div>
+        @foreach (var item in Model)
+        {
+            <div class="gla-cart">
+                <div class="video-container">
+                    <img src="@item.CartImgPath" class="thumbnail">
+                </div>
+                <div class="video-blur">
+                    <div class="image-info-title">@item.CartGameName</div>
+                    <div class="image-info-price">@item.CartGamePrice</div>
+                    <div class="combo-box-container">
+                        <select id="quantity-@item.IdCart" name="quantity">
+                            @for (int i = 1; i <= 10; i++)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="button-container1">
+                        <form method="post" action="/Cart/RemoveFromCart">
+                            <input type="hidden" name="cartId" value="@item.IdCart" />
+                            <button class="butt1" type="submit"><i class='bx bx-trash'></i>Remove</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var cartGameQty = @item.CartGameQty;
+                    if (cartGameQty > 0 && cartGameQty <= 10) {
+                        document.getElementById("quantity-@item.IdCart").value = cartGameQty.toString();
+                    }
+                });
+            </script>
+            <script src="/js/QtyScript.js" asp-append-version="true"></script>
+        }
+        <div id="summary-container" class="cart-container3">
+            <div class="cart-title2">Summary</div>
+            <div class="summ-blur">
+                <div class="summ-info-title">Official price</div>
+                <div class="summ-info-title">Delivery</div>
+                <div class="summ-info-title">Total with VAT</div>
+                <div class="summ-info-price">@String.Format("{0:0.00}", ViewBag.TotalPrice) KM</div>
+                <div class="summ-info-price">@String.Format("{0:0.00}", ViewBag.DeliveryCost) KM</div>
+                <div class="summ-info-price">@String.Format("{0:0.00}", ViewBag.VAT) KM</div>
+            </div>
+            <a class="button-container2" href="@Url.Action("Payment", "Payment")?totalPrice=@ViewBag.TotalPrice&deliveryCost=@ViewBag.DeliveryCost&vat=@ViewBag.VAT">
+                <div class="butt2">Go to payment</div>
+            </a>
+        </div>
+    </div>
+    <div class="cart-container4" id="empty-cart">
+        <div class="cart-empcont">
+            <div class="cart-icon"></div>
+            <div class="cart-empty">Your cart is empty</div>
+            <div class="cart-emptex">You didn't add any item in your cart yet.<br>Browse the website to find amazing deals!</div>
+            <a class="button-container3" href="@Url.Action("VPage", "MainPage")">
+                <div class="butt3">Discover games</div>
+            </a>
+        </div>
+    </div>
+    <script src="/js/CheckCartScript.js" asp-append-version="true"></script>
+</div>

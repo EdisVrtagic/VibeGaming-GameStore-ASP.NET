@@ -1,0 +1,228 @@
+﻿@model IEnumerable<VibeGamingWeb.Models.DBEntities.VibeGames>
+@{
+    ViewData["Title"] = "- Home page";
+    Layout = "~/Views/Shared/_VibeMain.cshtml";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/mainpage.css" />
+</head>
+<header class="header-container" id="header">
+    <a href="@Url.Action("VPage", "MainPage")" title="Home" class="logo-vg"></a>
+    <div class="menu">
+        <div class="trendings">
+        </div>
+        <div class="product-menu">
+            <div class="glossy"></div>
+            <div class="links">
+                <div class="nav pc" id="nav-pc">
+                    <a class="access mimic" href="#pcscroll">
+                        <div class="icon-pc icon-xs"></div>
+                        <span class="title">PC</span>
+                        <div class="icon-arrow icon-xxxs"></div>
+                    </a>
+                </div>
+                <div class="nav playstation" id="nav-playstation">
+                    <a class="access mimic" href="#psscroll">
+                        <div class="icon-playstation icon-xs"></div>
+                        <span class="title">Playstation</span>
+                        <div class="icon-arrow icon-xxxs"></div>
+                    </a>
+                </div>
+                <div class="nav xbox" id="nav-xbox">
+                    <a class="access mimic" href="#xbscroll">
+                        <div class="icon-xbox icon-xs"></div>
+                        <span class="title">Xbox</span>
+                        <div class="icon-arrow icon-xxxs"></div>
+                    </a>
+                </div>
+                <div class="nav nintendo" id="nav-nintendo">
+                    <a class="access mimic" href="#niscroll">
+                        <div class="icon-switch icon-xs"></div>
+                        <span class="title">Nintendo</span>
+                        <div class="icon-arrow icon-xxxs"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="icon">
+                <i class="search fa fa-search"></i>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="GTA V, FC24, multiplayer..." autocomplete="off" id="search" value="">
+                <i class="clear fa fa-times"></i>
+            </div>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="login-container">
+            @if (User?.Identity?.IsAuthenticated ?? false)
+            {
+                <div id="cart-app">
+                    <a title="cart" href="@Url.Action("Cart", "Cart")" class="cart-container">
+                        <div class="icon-cart icon-s"></div>
+                        <div class="icon-cart-num">@ViewBag.CartItemCount</div>
+                    </a>
+                </div>
+                <div class="user-logged" id="user-logged">
+                    <a title="profile">
+                        <div class="icon-logg"></div>
+                    </a>
+                    <div class="user-logged-menu" id="user-logged-menu">
+                        <a href="@Url.Action("Order", "Order")">
+                            <div class="user-btn">My orders</div>
+                        </a>
+                        <a href="@Url.Action("Account", "Account")">
+                            <div class="user-btn">Settings</div>
+                        </a>
+                        <a asp-controller="Login" asp-action="LogOut">
+                            <div class="user-btn">Sign out</div>
+                        </a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="user">
+                    <a title="login" href="@Url.Action("Login", "Login")">
+                        <div class="icon-user icon-m"></div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</header>
+<div class="game-search-container" id="game-container" style="display: none;">
+    @foreach (var game in ViewBag.AllGames)
+    {
+        <div class="game-avail">
+            <div class="game-search-img">
+                <img src="@game.GameImgPath" class="seathumb">
+            </div>
+            <div class="game-name-container">
+                <div class="game-name-avail buyGameLink" data-game-id="@game.IdGame" data-game-title="@game.GameName.ToLower().Replace(" ", "-")">@game.GameName</div>
+            </div>
+        </div>
+    }
+</div>
+<div class="home-container">
+    <div class="highlights-container top-banner">
+        <a href="/p/14-buy-ghost-of-tsushima:-director’s-cut">
+            <picture class="parallax" style="top: 0px; bottom: 0px;">
+                <div class="header-top-gradient"></div>
+                <source srcset="~/wallpapers/promo320.jpg" media="(max-width: 320px)" />
+                <source srcset="~/wallpapers/promo768.jpg" media="(max-width: 768px)" />
+                <source srcset="~/wallpapers/promo1200.jpg" media="(max-width: 1200px)" />
+                <source srcset="~/wallpapers/promo1920.jpg" media="(max-width: 1920px)" />
+                <img src="~/wallpapers/promo1920.jpg" alt="Promo game">
+            </picture>
+        </a>
+    </div>
+</div>
+@if (ViewBag.PcGames != null && ViewBag.PcGames.Count > 0)
+{
+    <div class="pc-games" id="pcscroll">
+        <div class="all-text">Popular for PC</div>
+        @foreach (var game in ViewBag.PcGames)
+        {
+            <a class="buyGameLink" data-game-id="@game.IdGame" data-game-title="@game.GameName.ToLower().Replace(" ", "-")">
+                <div class="video-container">
+                    <img src="@game.GameImgPath" class="thumbnail">
+                    <div class="video-blur">
+                        <div class="image-info-title">@game.GameName</div>
+                        <div class="image-info-price">@game.GamePrice KM</div>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+}
+<div class="banners-container">
+    <div class="ban1"></div>
+    <div class="ban2"></div>
+    <div class="spec-sales-container">Vibe Gaming - All games in one place</div>
+    <div class="spec-sales-desc">Special offers for all users of our services, join our community with over 10,000+ members and find out why we are the best and highest quality.</div>
+</div>
+@if (ViewBag.PlaystationGames != null && ViewBag.PlaystationGames.Count > 0)
+{
+    <div class="ps-games" id="psscroll">
+        <div class="all-text">Popular for Playstation</div>
+        @foreach (var game in ViewBag.PlaystationGames)
+        {
+            <a class="buyGameLink" data-game-id="@game.IdGame" data-game-title="@game.GameName.ToLower().Replace(" ", "-")">
+                <div class="video-container">
+                    <img src="@game.GameImgPath" class="thumbnail">
+                    <div class="video-blur">
+                        <div class="image-info-title">@game.GameName</div>
+                        <div class="image-info-price">@game.GamePrice KM</div>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+}
+<div class="banners2-container">
+    <div class="ban3"></div>
+    <div class="spec-sales-container2">Experience the best with the PS5 console</div>
+    <div class="spec-sales-desc2">Get your PS5 console as soon as possible and enjoy numerous titles from the gaming industry, and join many satisfied users for the best experience.</div>
+</div>
+@if (ViewBag.xboxGames != null && ViewBag.xboxGames.Count > 0)
+{
+    <div class="xb-games" id="xbscroll">
+        <div class="all-text">Popular for Xbox</div>
+        @foreach (var game in ViewBag.xboxGames)
+        {
+            <a class="buyGameLink" data-game-id="@game.IdGame" data-game-title="@game.GameName.ToLower().Replace(" ", "-")">
+                <div class="video-container">
+                    <img src="@game.GameImgPath" class="thumbnail">
+                    <div class="video-blur">
+                        <div class="image-info-title">@game.GameName</div>
+                        <div class="image-info-price">@game.GamePrice KM</div>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+}
+@if (ViewBag.NintendoGames != null && ViewBag.NintendoGames.Count > 0)
+{
+    <div class="ni-games" id="niscroll">
+        <div class="all-text">Popular for Nintendo</div>
+        @foreach (var game in ViewBag.NintendoGames)
+        {
+            <a class="buyGameLink" data-game-id="@game.IdGame" data-game-title="@game.GameName.ToLower().Replace(" ", "-")">
+                <div class="video-container">
+                    <img src="@game.GameImgPath" class="thumbnail">
+                    <div class="video-blur">
+                        <div class="image-info-title">@game.GameName</div>
+                        <div class="image-info-price">@game.GamePrice KM</div>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+}
+<footer class="foot-container">
+    <div class="foot-logo"></div>
+    <div class="foot-note">
+        The Vibe Gaming project is used for the purpose of a graduate thesis at the university, and each of the
+        showcased games is under the copyright protection of their publishers.
+        The website will also not
+        be publicly accessible on any hosting domain nor will it be used for public purposes.
+        The entire project is a student's work.
+    </div>
+    <div class="foot-social">
+        <a class="foot-ln" href="https://www.linkedin.com/in/edis-vrtagic22/" target="_blank"></a>
+        <a class="foot-git" href="https://github.com/EdisVrtagic" target="_blank"></a>
+        <a class="foot-yt" href="https://www.youtube.com/c/DonMarquez21" target="_blank"></a>
+        <a class="foot-fb" href="https://www.facebook.com/edis.vrtagic1/" target="_blank"></a>
+    </div>
+    <div class="foot-line">
+        <div class="foot-left">Copyright &copy 2024 VG - All rights reserved</div>
+        <a class="foot-right" href="https://www.linkedin.com/in/edis-vrtagic22/" target="_blank">Web design & code: Edis Vrtagić</a>
+    </div>
+</footer>
+<script src="/js/SearchScript.js" asp-append-version="true"></script>
+<script src="/js/BuyGameLinkScript.js" asp-append-version="true"></script>
+<script src="/js/HScrollScript.js" asp-append-version="true"></script>
+<script src="/js/ScrollAnimScript.js" asp-append-version="true"></script>

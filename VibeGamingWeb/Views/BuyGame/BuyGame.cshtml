@@ -1,0 +1,352 @@
+﻿@using VibeGamingWeb.Models.DBEntities
+@model VibeGamingWeb.Models.DBEntities.VibeGames
+@{
+    string pageTitle = string.IsNullOrEmpty(ViewBag.Title as string) ? "Buy" : $"- Buy {ViewBag.Title}";
+    ViewData["Title"] = pageTitle;
+    Layout = "~/Views/Shared/_VibeMain.cshtml";
+    var specOSMin = ViewData["SpecOSMin"] as string;
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/buygamepage.css" />
+</head>
+<header class="header-container" id="header">
+    <a href="@Url.Action("VPage", "MainPage")" title="Home" class="logo-vg"></a>
+    <div class="menu">
+        <div class="product-menu">
+            <div class="glossy"></div>
+            <div class="links">
+                <div class="nav pc" id="nav-pc">
+                    <a class="access mimic" href="#homegame">
+                        <div class="icon-pc icon-xs"></div>
+                        <span class="title">Home</span>
+                        <div class="icon-arrow icon-xxxs"></div>
+                    </a>
+                </div>
+                <div class="nav playstation" id="nav-playstation">
+                    <a class="access mimic" href="#gallerygame">
+                        <div class="icon-playstation icon-xs"></div>
+                        <span class="title">Gallery</span>
+                        <div class="icon-arrow icon-xxxs"></div>
+                    </a>
+                </div>
+                <div class="nav xbox" id="nav-xbox">
+                    <a class="access mimic" href="#gametrailer">
+                        <div class="icon-xbox icon-xs"></div>
+                        <span class="title">Trailers</span>
+                        <div class="icon-arrow icon-xxxs"></div>
+                    </a>
+                </div>
+                <div class="nav nintendo" id="nav-nintendo">
+                    <a class="access mimic" href="#gameconfig">
+                        <div class="icon-switch icon-xs"></div>
+                        <span class="title">Specs</span>
+                        <div class="icon-arrow icon-xxxs"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="icon">
+                <i class="search fa fa-search"></i>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="GTA V, FC24, multiplayer..." autocomplete="off" id="search" value="">
+                <i class="clear fa fa-times"></i>
+            </div>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="login-container">
+            @if (User?.Identity?.IsAuthenticated ?? false)
+            {
+                <div id="cart-app">
+                    <a title="cart" href="@Url.Action("Cart", "Cart")" class="cart-container">
+                        <div class="icon-cart icon-s"></div>
+                        <div class="icon-cart-num">@ViewBag.CartItemCount</div>
+                    </a>
+                </div>
+                <div class="user-logged" id="user-logged">
+                    <a title="profile">
+                        <div class="icon-logg"></div>
+                    </a>
+                    <div class="user-logged-menu" id="user-logged-menu">
+                        <a href="@Url.Action("Order", "Order")">
+                            <div class="user-btn">My orders</div>
+                        </a>
+                        <a href="@Url.Action("Account", "Account")">
+                            <div class="user-btn">Settings</div>
+                        </a>
+                        <a asp-controller="Login" asp-action="LogOut">
+                            <div class="user-btn">Sign out</div>
+                        </a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="user">
+                    <a title="login" href="@Url.Action("Login", "Login", new { returnUrl = Context.Request.Path })">
+                        <div class="icon-user icon-m"></div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</header>
+<div class="game-search-container" id="game-container" style="display: none;">
+    @foreach (var allga in ViewBag.AllGames)
+    {
+        <div class="game-avail">
+            <div class="game-search-img">
+                <img src="@allga.GameImgPath" class="seathumb">
+            </div>
+            <div class="game-name-container">
+                <div class="game-name-avail buyGameLink" data-game-id="@allga.IdGame" data-game-title="@allga.GameName.ToLower().Replace(" ", "-")">@allga.GameName</div>
+            </div>
+        </div>
+    }
+</div>
+<div class="home-container" id="homegame">
+    <div class="highlights-container top-banner">
+        <picture class="parallax" style="top: 0px; bottom: 0px;">
+            <div class="header-top-gradient"></div>
+            <img src="@ViewData["BuyWallImgPath"]">
+        </picture>
+    </div>
+</div>
+<div class="panel-container">
+    <div class="panel">
+        <div class="game-title">@ViewData["BuyName"]</div>
+        <div class="plat-co">
+            <div class="platform-container">
+                <img src="@ViewData["BuyPlatImgPath"]" class="icon-xs" />
+            </div>
+            <div class="platform-edition">
+                <span class="name-edition">@ViewData["BuyGameEdition"]</span>
+            </div>
+            <div class="platform-stock">
+                <span class="status-stock">@ViewData["BuyStockGame"]</span>
+            </div>
+            <div class="platform-iarc">
+                <div class="icon-iarc icon-xs"></div>
+                <span class="title-iarc">@ViewData["BuyAgeRestrict"]</span>
+            </div>
+        </div>
+        <div class="pro-dio">
+            <div class="product-price">
+                <span class="title-price">KM @ViewData["BuyPrice"]</span>
+            </div>
+            @if (User?.Identity?.IsAuthenticated ?? false)
+            {
+                <div class="button-container">
+                    <form id="addToCartForm">
+                        <input type="hidden" name="gameId" value="@ViewData["IdGame"]">
+                        <button class="button" type="submit"><i class='bx bx-cart'></i>Add to cart</button>
+                    </form>
+                </div>
+                <script src="/js/AddToCartScript.js" asp-append-version="true"></script>
+            }
+            else
+            {
+                <div class="button-container">
+                    <a href="@Url.Action("Login", "Login", new { returnUrl = Context.Request.Path })">
+                        <div class="button" type="submit"><i class='bx bx-cart'></i>Add to cart</div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="info-menu">
+    <div class="info-links">
+        <div class="navig p1">
+            <a class="scs mimicis">
+                <div class="icon-spmp icon-xl"></div>
+                <span class="info-title">@ViewData["CateOfOn"]</span>
+            </a>
+        </div>
+        <div class="navig p2">
+            <a class="scs mimicis">
+                <div class="icon-dky icon-xl"></div>
+                <span class="info-title">@ViewData["CateDigKey"]</span>
+            </a>
+        </div>
+        <div class="navig p3">
+            <a class="scs mimicis">
+                <div class="icon-ghs icon-xl"></div>
+                <span class="info-title">@ViewData["CateGameSupp"]</span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="info-menu2">
+    <div class="info-links2">
+        <div class="navigs p4">
+            <a class="scss mimicis">
+                <div class="icon-onpl icon-xl"></div>
+                <span class="info-title2">@ViewData["CatePlayer"]</span>
+            </a>
+        </div>
+        <div class="navigs p5">
+            <a class="scss mimicis">
+                <div class="icon-dev icon-xl"></div>
+                <span class="info-title2">@ViewData["CateDev"]</span>
+            </a>
+        </div>
+        <div class="navigs p6">
+            <a class="scss mimicis">
+                <div class="icon-rat icon-xl"></div>
+                <span class="info-title2">@ViewData["CateRevNum"]</span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="tags-container">
+    <div class="tags accordion-item wide">
+        <div class="plat-tg">
+            <span class="name-ta">@ViewData["TipGame1"]</span>
+        </div>
+        <div class="adv-tg">
+            <span class="name-ta">@ViewData["TipGame2"]</span>
+        </div>
+        <div class="thp-tg">
+            <span class="name-ta">@ViewData["TipGame3"]</span>
+        </div>
+        <div class="sur-tg">
+            <span class="name-ta">@ViewData["TipGame4"]</span>
+        </div>
+    </div>
+</div>
+<div class="ab-container">
+    <div class="img-overlay"></div>
+    <img src="@ViewData["TipBannPath"]" alt="About the game" />
+    <div class="ab-p2">@ViewData["TipAboutGame"]</div>
+    <div class="ab-p3">@ViewData["TipTextGame"]</div>
+</div>
+<div class="video-games-text">
+    <p>GAME GALLERY</p>
+</div>
+<div class="video-games-text2">
+    <p>Here you can find several pictures from the game gallery, as well as descriptions for each picture to better acquaint yourself with the game's features.</p>
+</div>
+<div class="liggal" id="gallerygame">
+    @if (ViewData["GalleryImages"] is List<VibeGall> galleryImages && galleryImages.Count > 0)
+    {
+        @foreach (var gallery in galleryImages)
+        {
+            <a href="@Url.Content($"{ViewData["ImagePath"]}{gallery.GallImgPath}")" data-lg-thumbnail="@Url.Content($"{ViewData["ImagePath"]}{gallery.GallImgPath}")">
+                <img src="@Url.Content($"{ViewData["ImagePath"]}{gallery.GallImgPath}")">
+                <div class="image-info-title">
+                    <p>@gallery.GallImgTitle</p>
+                </div>
+                <div class="image-info-more">
+                    <p>@gallery.GallImgDesc</p>
+                </div>
+            </a>
+        }
+    }
+    else
+    {
+        <p>No gallery images found.</p>
+    }
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/fullscreen/lg-fullscreen.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script>
+    lightGallery(document.getElementById('gallerygame'), {
+        plugins: [lgThumbnail, lgFullscreen],
+        controls: false,
+        download: false,
+        counter: false,
+        thumbWidth: 150,
+        thumbHeight: 90,
+        zIndex: 6
+    });
+</script>
+<div class="video-games-news">
+    <p>New trailers</p>
+</div>
+<div class="trailer-container" id="gametrailer">
+    @foreach (var trailer in ViewData["TrailerImages"] as List<VibeTrailer> ?? Enumerable.Empty<VibeTrailer>())
+    {
+        <div class="trailer">
+            <a href="@trailer?.TraLink" target="_blank">
+                <img src="@trailer?.TraImgPath" alt="Trailer Thumbnail">
+            </a>
+        </div>
+    }
+</div>
+@if (!string.IsNullOrEmpty(specOSMin))
+{
+    <div class="video-games-config">
+        <p>Configurations</p>
+    </div>
+    <div class="config-container" id="gameconfig">
+        <div class="config-box">
+            <div class="config-title">
+                <p>Minimum</p>
+            </div>
+            <div class="config-spec">
+                <p>OS: @ViewData["SpecOSMin"]</p>
+            </div>
+            <div class="config-spec">
+                <p>Processor: @ViewData["SpecProcMin"]</p>
+            </div>
+            <div class="config-spec">
+                <p>Memory: @ViewData["SpecMemMin"]</p>
+            </div>
+            <div class="config-spec">
+                <p>Graphics: @ViewData["SpecGrapMin"]</p>
+            </div>
+            <div class="config-spec">
+                <p>Storage: @ViewData["SpecStorMin"]</p>
+            </div>
+        </div>
+        <div class="config-box">
+            <div class="config-title">
+                <p>Recommended</p>
+            </div>
+            <div class="config-spec">
+                <p>OS: @ViewData["SpecOSMax"]</p>
+            </div>
+            <div class="config-spec">
+                <p>Processor: @ViewData["SpecProcMax"]</p>
+            </div>
+            <div class="config-spec">
+                <p>Memory: @ViewData["SpecMemMax"]</p>
+            </div>
+            <div class="config-spec">
+                <p>Graphics: @ViewData["SpecGrapMax"]</p>
+            </div>
+            <div class="config-spec">
+                <p>Storage: @ViewData["SpecStorMax"]</p>
+            </div>
+        </div>
+    </div>
+}
+<div class="prosucc-container"><i class='bx bxs-shopping-bags'></i>Product added to cart!</div>
+<footer class="foot-container">
+    <div class="foot-logo"></div>
+    <div class="foot-note">
+        The Vibe Gaming project is used for the purpose of a graduate thesis at the university, and each of the
+        showcased games is under the copyright protection of their publishers.
+        The website will also not
+        be publicly accessible on any hosting domain nor will it be used for public purposes.
+        The entire project is a student's work.
+    </div>
+    <div class="foot-social">
+        <a class="foot-ln" href="https://www.linkedin.com/in/edis-vrtagic22/" target="_blank"></a>
+        <a class="foot-git" href="https://github.com/EdisVrtagic" target="_blank"></a>
+        <a class="foot-yt" href="https://www.youtube.com/c/DonMarquez21" target="_blank"></a>
+        <a class="foot-fb" href="https://www.facebook.com/edis.vrtagic1/" target="_blank"></a>
+    </div>
+    <div class="foot-line">
+        <div class="foot-left">Copyright &copy 2024 VG - All rights reserved</div>
+        <a class="foot-right" href="https://www.linkedin.com/in/edis-vrtagic22/" target="_blank">Web design & code: Edis Vrtagić</a>
+    </div>
+</footer>
+<script src="/js/SearchScript.js" asp-append-version="true"></script>
+<script src="/js/BuyGameLinkScript.js" asp-append-version="true"></script>
+<script src="/js/HScrollScript.js" asp-append-version="true"></script>
+<script src="/js/ScrollAnimScript.js" asp-append-version="true"></script>

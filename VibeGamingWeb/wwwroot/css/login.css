@@ -1,0 +1,289 @@
+﻿:root {
+    --tw-gradient-from: #162a32;
+    --tw-gradient-to: #0f0f0f;
+    --tw-main-color: #2d7e91;
+    --tw-white-color: #ffffff;
+}
+body {
+    background-color: var(--tw-gradient-to);
+    color: #fff;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+.login-container {
+    padding: 0px;
+    max-width: 500px;
+    margin: 16% auto;
+}
+
+.loginbox-login {
+    position: relative;
+    width: 100%;
+}
+.loginbox-login .lacc{
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.lform-group {
+    margin-bottom: 20px;
+}
+
+.lform-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.lform-group input {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #3d3d3d;
+    border-radius: 7px;
+    background-color: var(--tw-gradient-from);
+    color: white;
+    outline: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+}
+.lform-group {
+    position: relative;
+}
+
+.lform-group input {
+    padding-left: 40px;
+}
+.lform-group .icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(30%, -50%);
+}
+
+.icon i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.lform-group input::placeholder {
+    color: #b0afaf;
+}
+.lform-group input:focus {
+    outline: 1px solid var(--tw-main-color);
+}
+.lform-group input:hover {
+    outline: 1px solid var(--tw-main-color);
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    left: 0%;
+}
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.icon-linkedin i,
+.icon-github i,
+.icon-youtube i {
+    font-size: 35px;
+    color: #ffffff;
+}
+.coptext p {
+    text-align: center;
+    position: fixed;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    left: 48.7%;
+    bottom: 0%;
+    transform: translateX(-37%);
+}
+button:hover {
+    background-color: rgba(45,126,145,0.7);
+}
+.logo-loginvg {
+    background-image: url('/logoimages/vglh.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 12%;
+    left: 46%;
+    cursor: pointer;
+}
+.loginbox-login .wallpapers {
+    background-image: url('/wallpapers/go.png');
+    background-size: cover;
+    background-position: top;
+    width: 30%;
+    position: fixed;
+    left: -3.7%;
+    top: 39%;
+    bottom: -11%;
+}
+.loginbox-login .wallpapers2 {
+    background-image: url('/wallpapers/the.png');
+    background-size: cover;
+    background-position: top;
+    width: 30%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    left: 0%;
+}
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.icon-linkedin i,
+.icon-github i,
+.icon-youtube i {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+
+.button-container {
+    margin-top: 30px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--tw-main-color);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.additional-text {
+    margin-top: 15px;
+}
+.logtext a {
+    position: fixed;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    left: 37.1%;
+    text-decoration: none;
+}
+.logtext a:hover {
+    color: var(--tw-main-color);
+    cursor: pointer;
+}
+.passtext a {
+    position: fixed;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    left: 57.3%;
+    text-decoration: none;
+}
+.passtext a:hover {
+    color: var(--tw-main-color);
+    cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+    .loginbox-login {
+        top: 100px;
+    }
+    .logo-loginvg {
+        height: 80px;
+        width: 80px;
+        top: 185px;
+        left: 550px;
+    }
+    .loginbox-login .wallpapers {
+        width: 40%;
+        left: -140px;
+    }
+    .loginbox-login .wallpapers2 {
+        width: 40%;
+        left: 860px;
+    }
+    .logtext a {
+        left: 29.4%;
+    }
+    .coptext p {
+        left: 575px;
+    }
+    .social-icons {
+        bottom: 50px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .loginbox-login {
+        top: 120px;
+    }
+    .logo-loginvg {
+        height: 80px;
+        width: 80px;
+        top: 130px;
+        left: 350px;
+    }
+    .loginbox-login .wallpapers,
+    .loginbox-login .wallpapers2 {
+        display: none;
+    }
+    .logtext a {
+        left: 18%;
+    }
+    .coptext p {
+        left: 355px;
+    }
+    .social-icons {
+        bottom: 50px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .loginbox-login {
+        top: 190px;
+    }
+
+    .logo-loginvg {
+        height: 60px;
+        width: 60px;
+        top: 160px;
+        left: 130px;
+    }
+
+    .loginbox-login .wallpapers,
+    .loginbox-login .wallpapers2 {
+        display: none;
+    }
+
+    .logtext a {
+        left: 3%;
+    }
+
+    .coptext p {
+        left: 130px;
+    }
+
+    .social-icons {
+        bottom: 60px;
+    }
+}

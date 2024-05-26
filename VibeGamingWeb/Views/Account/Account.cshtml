@@ -1,0 +1,99 @@
+﻿@model VibeGamingWeb.Models.DBEntities.VibeUsers
+@{
+    ViewData["Title"] = "- Account Settings";
+    Layout = "~/Views/Shared/_VibeMain.cshtml";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/account.css" />
+</head>
+<header class="header-container" id="header">
+    <a href="@Url.Action("VPage", "MainPage")" title="Home" class="logo-vg"></a>
+    <div class="header-right">
+        <div class="login-container">
+            @if (User?.Identity?.IsAuthenticated ?? false)
+            {
+                <div id="cart-app">
+                    <a title="cart" href="@Url.Action("Cart", "Cart")" class="cart-container">
+                        <div class="icon-cart icon-s"></div>
+                        <div class="icon-cart-num">@ViewBag.CartItemCount</div>
+                    </a>
+                </div>
+                <div class="user-logged" id="user-logged">
+                    <a title="profile">
+                        <div class="icon-logg"></div>
+                    </a>
+                    <div class="user-logged-menu" id="user-logged-menu">
+                        <a href="@Url.Action("Order", "Order")">
+                            <div class="user-btn">My orders</div>
+                        </a>
+                        <a href="@Url.Action("Account", "Account")">
+                            <div class="user-btn">Settings</div>
+                        </a>
+                        <a asp-controller="Login" asp-action="LogOut">
+                            <div class="user-btn">Sign out</div>
+                        </a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="user">
+                    <a title="login" href="@Url.Action("Login", "Login")">
+                        <div class="icon-user icon-m"></div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</header>
+<div class="edit-container">
+    <div class="edit-banner">
+        <div class="pro-ban-cont">
+            <div class="account-img"></div>
+            <div class="account-info">
+                <div class="account-name">@Model.FirstName @Model.LastName</div>
+            </div>
+        </div>
+    </div>
+    <div class="per-info">
+        <div class="per-title">
+            <div class="per-sett">Account Settings</div>
+            <div class="per-man">Manage your account's detail.</div>
+        </div>
+        <form asp-action="" autocomplete="off">
+            <div class="aform-group">
+                <input class="form-control" autocomplete="off" value="@Model.FirstName" />
+            </div>
+            <div class="aform-group">
+                <input class="form-control" autocomplete="off" value="@Model.LastName" />
+            </div>
+            <div class="aform-group">
+                <input class="form-control" autocomplete="off" value="@Model.Email" />
+            </div>
+        </form>
+        <form class="eform" asp-action="Account" autocomplete="off" method="post">
+            <div class="eform-group">
+                <input class="form-control" autocomplete="off" placeholder="New First Name" name="FirstName" />
+            </div>
+            <div class="eform-group">
+                <input class="form-control" autocomplete="off" placeholder="New Last Name" name="LastName" />
+            </div>
+            <div class="eform-group">
+                <input class="form-control" autocomplete="off" placeholder="New password" name="Password" />
+            </div>
+            <div class="button-container">
+                <button type="submit" value="EditAccount" id="saveButton" disabled>SAVE CHANGES</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    const inputs = document.querySelectorAll('.eform input');
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            const isFilled = Array.from(inputs).some(input => input.value.trim());
+            document.getElementById('saveButton').disabled = !isFilled;
+        });
+    });
+</script>
+<script src="/js/BuyGameLinkScript.js" asp-append-version="true"></script>

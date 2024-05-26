@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "- Payment";
+    Layout = "~/Views/Shared/_VibeMain.cshtml";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/payment.css" />
+    <script src="/js/RemScript.js" asp-append-version="true"></script>
+</head>
+<header class="header-container">
+    <a href="@Url.Action("VPage", "MainPage")" title="Home" class="logo-vg"></a>
+    <div class="check-container">
+        <div class="check-glass">
+            <div class="check-circle">
+                <div class="check-num">1</div>
+            </div>
+            <div class="check-text">Shopping cart</div>
+        </div>
+        <div class="check-glass">
+            <div class="check-line activ"></div>
+            <div class="check-circle activ">
+                <div class="check-num ac">2</div>
+            </div>
+            <div class="check-text ac">Payment</div>
+        </div>
+    </div>
+</header>
+<div class="cart-container">
+    <div class="cart-container2">
+        <div class="cart-title">Payment info</div>
+        <div class="video-container"></div>
+        <div class="video-blur">
+            <form class="eform" id="paymentForm" asp-action="ProcessPayment" autocomplete="off" method="post">
+                <div class="eform-group">
+                    <input class="form-control" autocomplete="off" required placeholder="First Name" name="firstName" />
+                </div>
+                <div class="eform-group">
+                    <input class="form-control" autocomplete="off" required placeholder="Last Name" name="lastName" />
+                </div>
+                <div class="eform-group">
+                    <input class="form-control" autocomplete="off" required placeholder="Address" name="address" />
+                </div>
+                <div class="eform-group">
+                    <input class="form-control" autocomplete="off" required placeholder="Phone number" name="phoneNumber" />
+                </div>
+                <div class="button-container2">
+                    <button class="butt2" id="submitBtn" type="submit">Buy and pay</button>
+                </div>
+            </form>
+            <script src="/js/PaymentScript.js" asp-append-version="true"></script>
+        </div>
+        <div class="cart-container3">
+            <div class="cart-title2">Summary</div>
+            <div class="summ-blur">
+                <div class="summ-info-title">Official price</div>
+                <div class="summ-info-title">Delivery</div>
+                <div class="summ-info-title">Total including VAT</div>
+                <div class="summ-info-price">@Context.Request.Query["totalPrice"] KM</div>
+                <div class="summ-info-price">@Context.Request.Query["deliveryCost"] KM</div>
+                <div class="summ-info-price">@Context.Request.Query["vat"] KM</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="prosucc-container" id="successMessage">
+    <i class='bx bxs-shopping-bags'></i>Game successfully ordered!
+</div>

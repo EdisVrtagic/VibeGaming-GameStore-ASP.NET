@@ -1,0 +1,53 @@
+﻿@model VibeGamingWeb.Models.DBEntities.VibeUsers
+@{
+    ViewData["Title"] = "- Register";
+    Layout = "~/Views/Shared/_VibeMain.cshtml";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/register.css" />
+</head>
+<a class="logo-vg" href="@Url.Action("VPage", "MainPage")"></a>
+<div class="outer-container">
+    <div class="loginbox-register">
+        <div class="wallpaper"></div>
+        <div class="wallpaper2"></div>
+        <div class="inner-container">
+            <div class="cracc">
+                <p>CREATE YOUR ACCOUNT</p>
+            </div>
+            <form asp-action="Register">
+                <div class="form-group">
+                    <span class="icon"><i class='bx bxs-user'></i></span>
+                    <input asp-for="FirstName" class="form-control" autocomplete="off" required placeholder="First Name:" />
+                </div>
+                <div class="form-group">
+                    <span class="icon"><i class='bx bxs-user'></i></span>
+                    <input asp-for="LastName" class="form-control" autocomplete="off" required placeholder="Last Name:" />
+                </div>
+
+                <div class="form-group">
+                    <span class="icon"><i class='bx bx-envelope'></i></span>
+                    <input asp-for="Email" class="form-control" autocomplete="off" required placeholder="Email:" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <span class="icon"><i class='bx bx-lock'></i></span>
+                    <input asp-for="Password" class="form-control" autocomplete="off" required placeholder="Your password:" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <button type="submit" value="Register">Confirm</button>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/edis-vrtagic22/" target="_blank" class="icon-linkedin"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/EdisVrtagic" target="_blank" class="icon-github"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.youtube.com/c/DonMarquez21" target="_blank" class="icon-youtube"><i class='bx bxl-youtube'></i></a>
+                </div>
+                <div class="coptext">
+                    <p>All rights reserved &copy; VG 2024</p>
+                </div>
+                <div class="logtext" id="backToLogin">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">&lt;&lt; Back to Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

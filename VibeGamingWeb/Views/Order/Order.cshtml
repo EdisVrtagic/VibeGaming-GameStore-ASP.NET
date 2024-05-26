@@ -1,0 +1,92 @@
+﻿@model List<VibeGamingWeb.Models.DBEntities.VibeOrder>
+@{
+    ViewData["Title"] = "- Orders";
+    Layout = "~/Views/Shared/_VibeMain.cshtml";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/order.css" />
+</head>
+<header class="header-container" id="header">
+    <a href="@Url.Action("VPage", "MainPage")" title="Home" class="logo-vg"></a>
+    <div class="header-right">
+        <div class="login-container">
+            @if (User?.Identity?.IsAuthenticated ?? false)
+            {
+                <div id="cart-app">
+                    <a title="cart" href="@Url.Action("Cart", "Cart")" class="cart-container">
+                        <div class="icon-cart icon-s"></div>
+                        <div class="icon-cart-num">@ViewBag.CartItemCount</div>
+                    </a>
+                </div>
+                <div class="user-logged" id="user-logged">
+                    <a title="profile">
+                        <div class="icon-logg"></div>
+                    </a>
+                    <div class="user-logged-menu" id="user-logged-menu">
+                        <a href="@Url.Action("Order", "Order")">
+                            <div class="user-btn">My orders</div>
+                        </a>
+                        <a href="@Url.Action("Account", "Account")">
+                            <div class="user-btn">Settings</div>
+                        </a>
+                        <a asp-controller="Login" asp-action="LogOut">
+                            <div class="user-btn">Sign out</div>
+                        </a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="user">
+                    <a title="login" href="@Url.Action("Login", "Login")">
+                        <div class="icon-user icon-m"></div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</header>
+<div class="order-fill-container" id="order-content">
+    <div class="ordfill-text">My orders</div>
+    @foreach (var item in Model)
+    {
+        <div class="fill-order">
+            <div class="video-container">
+                <img src="@item.OrdImgPath" class="thumbnail">
+            </div>
+            <div class="video-blur">
+                <div class="image-info-title">@item.OrdGameName</div>
+                <div class="image-info-price">@item.OrdGamePrice KM</div>
+                <div class="button-container1">
+                    <form method="post" action="/Order/RemoveFromOrder">
+                        <input type="hidden" name="orderId" value="@item.IdOrd" />
+                        <button class="butt1" type="submit"><i class='bx bx-trash'></i>Remove</button>
+                    </form>
+                </div>
+            </div>
+            <div class="video-blur2">
+                <div class="order-data">@item.OrdFirstName</div>
+                <div class="order-data">@item.OrdLastName</div>
+                <div class="order-data">@item.OrdAddress</div>
+                <div class="order-data">@item.OrdPhoneNum</div>
+            </div>
+            <div class="video-blur3">
+                <div class="image-info-title">Quantity: @item.OrdGameQty</div>
+                <div class="image-info-pend">Pending</div>
+                <div class="image-info-price-summ">Total with delivery: @item.OrdTotalNum KM</div>
+            </div>
+        </div>
+    }
+</div>
+<div class="order-empty-container" id="empty-order">
+    <div class="order-emp">
+        <div class="order-icon"></div>
+        <div class="order-empty">You don't have any orders yet</div>
+        <div class="order-emptex">You haven't ordered any products yet. <br> Browse the website to find great deals!</div>
+        <a class="button-container3" href="@Url.Action("VPage", "MainPage")">
+            <div class="butt3">Discover games</div>
+        </a>
+    </div>
+</div>
+<script src="/js/CheckOrdScript.js" asp-append-version="true"></script>
+<script src="/js/BuyGameLinkScript.js" asp-append-version="true"></script>
