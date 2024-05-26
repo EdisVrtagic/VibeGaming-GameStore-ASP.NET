@@ -8,6 +8,7 @@ The Vibe Gaming project is a student project created for a diploma thesis, with 
 
 # Used script for the image gallery
 1. https://www.lightgalleryjs.com/docs/attributes/
+Note: For this project, a free license was used.
 
 # Configuration of MSSQL
 To create a database, or in this case to add an already defined database, SQL Server Management Studio (SSMS) will be used. SSMS is a program used for managing, configuring, and administering all components of the MSSQL Server. The main component of SSMS is the Object Explorer, which allows users to easily navigate and search for objects on the server. When SSMS is started, a pop-up window opens where you select the server and authenticate to the server where the pre-created database will be added, or an import will be performed. You can see the connection to the SQL Server in the following image (Image 1).
