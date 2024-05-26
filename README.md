@@ -56,3 +56,28 @@ After opening a new empty document, we need to paste the data that we will add t
 <div align="center">
   <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/d975e8ab-05f0-4518-b681-ad2125e7a591" alt="dbsh">
 </div>
+
+# Configuration of Visual Studio Community 2022
+When you first install Visual Studio Community 2022, since the project is developed using ASP.NET technology, it is necessary to download the following add-ons and install them exactly as shown in (Image 8).
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/270f67ce-a98a-4acf-86e7-cdda9ec59ca1" alt="wlo">
+  <p>Image 8: Workloads</p>
+</div>
+
+After successful modification, we can open our project's code by selecting 'Open a project or solution' in the window (Image 9) when opening Visual Studio. When a new window appears, find our project and open VibeGamingWeb.sln.
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/e0dfd482-f4f2-40a9-a24e-1156a43dc9fa" alt="tz">
+  <p>"Image 9: Opening the project</p>
+</div>
+
+When our project opens, we need to wait for a few moments (Image 10) for our project files to be successfully loaded. It is important to note that in this process, we do not need to install anything additionally, as Visual Studio will handle this for us, which is one of its great advantages.
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/61ab6f1b-a57a-4c8c-bdf7-b408c00af569" alt="mes">
+  <p>"Image 10: Loading project dependencies</p>
+</div>
+
+To launch our application, we first need to select 'IIS Express' from the dropdown menu (Image 11). This helps us simulate how our application will work when added to a real IIS Server on a hosting domain and assists us in identifying and resolving issues before the application is deployed to production. Additionally, the choice of web browser for testing our application depends on your preferences, but you can use the ones listed.
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/bbf0810f-3244-480e-b182-8aab0064c529" alt="run">
+  <p>"Image 11: Running the application</p>
+</div>
