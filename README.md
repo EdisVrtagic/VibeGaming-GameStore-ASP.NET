@@ -89,3 +89,6 @@ This part of the code is located in the PaymentController.
   <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/a784ebb7-d9d2-43a5-9109-5d6db14e645b" alt="emal">
 </div>
 YouTube video: https://www.youtube.com/watch?v=kTcmbZqNiGw
+
+# YouTube video presentation of the project
+Ovdje ce ici link.
