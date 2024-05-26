@@ -51,3 +51,8 @@ After opening a new empty document, we need to paste the data that we will add t
   <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/5a67e62b-fdc7-4e0f-ad63-876f905e454d" alt="expo">
   <p>Image 7: Part II – Executing data</p>
 </div>
+
+# Schema of the relational database for the project
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/d975e8ab-05f0-4518-b681-ad2125e7a591" alt="dbsh">
+</div>
