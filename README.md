@@ -22,3 +22,8 @@ After successfully connecting to the server, on the left side, the Object Explor
   <p>Image 2: Importing the database</p>
 </div>
 
+When we click on Import Data-tier Application, we get the following window (Image 3) where we can choose from which location on our computer we are adding the database to the server.
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/4bf1d81e-713a-4bdb-be95-3f89b82425c7" alt="rg">
+  <p>Image 3: Selecting the location of the imported database</p>
+</div>
