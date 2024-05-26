@@ -33,3 +33,9 @@ After successfully selecting the database from our computer, we get a new window
   <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/eebb3e00-cedd-42ba-9a34-40b5e2ee5a45" alt="im">
   <p>Image 4: General options of the imported database</p>
 </div>
+
+At the very end, after successfully adding or importing the database to SQL Server and after all the successful tasks executed during the import, we receive a message about the successful import of our database (Image 5), and we can click the Close button, and our database is added and ready for use.
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/8de1ada7-cd46-49f6-98ef-9654419d3800" alt="fd">
+  <p>Image 5: Message about the successful import of the database</p>
+</div>
