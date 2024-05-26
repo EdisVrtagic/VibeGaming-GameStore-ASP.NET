@@ -8,3 +8,7 @@ The Vibe Gaming project is a student project created for a diploma thesis, with 
 
 # Used script for the image gallery
 1. https://www.lightgalleryjs.com/docs/attributes/
+
+# Configuration of MSSQL
+![fe](https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/421d27a3-fe5e-422a-ad3f-209ac4a4fdcd)
+
