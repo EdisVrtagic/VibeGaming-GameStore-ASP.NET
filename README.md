@@ -39,3 +39,15 @@ At the very end, after successfully adding or importing the database to SQL Serv
   <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/8de1ada7-cd46-49f6-98ef-9654419d3800" alt="fd">
   <p>Image 5: Message about the successful import of the database</p>
 </div>
+
+In the following images (Image 6 and Image 7), we can see how data is added to the tables. In Image 6, it is necessary to select the database where we want to add the data, and in the upper head section, we have the option New Query which we need to click to open a new empty file where we work on adding data.
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/2f1e0023-9e23-45a2-bdcd-0e92b9273d38" alt="adpo">
+  <p>Image 6: Part I - Adding data</p>
+</div>
+
+After opening a new empty document, we need to paste the data that we will add to our tables (Image 7), and then in the head section, click on the Execute option, after which our data will be successfully added to the tables.
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/5a67e62b-fdc7-4e0f-ad63-876f905e454d" alt="expo">
+  <p>Image 7: Part II – Executing data</p>
+</div>
