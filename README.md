@@ -10,10 +10,15 @@ The Vibe Gaming project is a student project created for a diploma thesis, with 
 1. https://www.lightgalleryjs.com/docs/attributes/
 
 # Configuration of MSSQL
+To create a database, or in this case to add an already defined database, SQL Server Management Studio (SSMS) will be used. SSMS is a program used for managing, configuring, and administering all components of the MSSQL Server. The main component of SSMS is the Object Explorer, which allows users to easily navigate and search for objects on the server. When SSMS is started, a pop-up window opens where you select the server and authenticate to the server where the pre-created database will be added, or an import will be performed. You can see the connection to the SQL Server in the following image (Image 1).
 <div align="center">
   <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/421d27a3-fe5e-422a-ad3f-209ac4a4fdcd" alt="fe">
   <p>Image 1: Connecting to the server using SSMS</p>
 </div>
 
-To create a database, or in this case to add an already defined database, SQL Server Management Studio (SSMS) will be used. SSMS is a program used for managing, configuring, and administering all components of the MSSQL Server. The main component of SSMS is the Object Explorer, which allows users to easily navigate and search for objects on the server. When SSMS is started, a pop-up window opens where you select the server and authenticate to the server where the pre-created database will be added, or an import will be performed. You can see the connection to the SQL Server in the following image (Image 1).
+After successfully connecting to the server, on the left side, the Object Explorer is displayed, containing all the objects on the server that we can manage. In our case, we will not create a new database but rather add an existing one, or perform Import Data-tier Application, which we can access by right-clicking on Databases to open a dropdown menu with various options related to the database, as shown in the following image (Image 2.).
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/de4d14da-a55f-49ea-b294-33d45637ca47" alt="dr">
+  <p>Image 2: Importing the database</p>
+</div>
 
