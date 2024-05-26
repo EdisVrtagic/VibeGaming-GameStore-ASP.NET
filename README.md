@@ -81,3 +81,11 @@ To launch our application, we first need to select 'IIS Express' from the dropdo
   <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/bbf0810f-3244-480e-b182-8aab0064c529" alt="run">
   <p>Image 11: Running the application</p>
 </div>
+
+# Email credentials
+To send a successful order confirmation message to the user's email, you need to add your email address and password from which the message will be sent. You can find instructions on how to create an access password for web applications in the video link below.
+This part of the code is located in the PaymentController.
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/a784ebb7-d9d2-43a5-9109-5d6db14e645b" alt="emal">
+</div>
+YouTube video: https://www.youtube.com/watch?v=kTcmbZqNiGw
