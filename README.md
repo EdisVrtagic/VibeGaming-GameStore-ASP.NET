@@ -27,3 +27,9 @@ When we click on Import Data-tier Application, we get the following window (Imag
   <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/4bf1d81e-713a-4bdb-be95-3f89b82425c7" alt="rg">
   <p>Image 3: Selecting the location of the imported database</p>
 </div>
+
+After successfully selecting the database from our computer, we get a new window (Image 4) where we can adjust the name of our database as desired (it is recommended to leave it as the system has defined it).
+<div align="center">
+  <img src="https://github.com/EdisVrtagic/VibeGaming-GameStore-ASP.NET/assets/101829021/eebb3e00-cedd-42ba-9a34-40b5e2ee5a45" alt="im">
+  <p>Image 4: General options of the imported database</p>
+</div>
