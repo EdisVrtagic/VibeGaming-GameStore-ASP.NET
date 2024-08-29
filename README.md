@@ -92,4 +92,4 @@ This part of the code is located in the PaymentController.
 YouTube video: https://www.youtube.com/watch?v=kTcmbZqNiGw
 
 # YouTube video presentation of the project
-Ovdje ce ici link.
+YouTube presentation: https://youtu.be/Dgwl19UbVFA
